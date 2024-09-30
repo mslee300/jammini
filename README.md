@@ -11,7 +11,7 @@ We are building a live, competitive English-learning game platform that makes pr
 
 ### Backend
 
-First, set up a virtual environment and download required files:
+Navigate to the backend directory, create a virtual environment, and install the dependencies:
 
 ```bash
 cd backend
@@ -20,7 +20,7 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-Once the files are installed, you can run the backend code: 🎉
+Run the backend server:
 
 ```bash
 python manage.py runserver
@@ -28,7 +28,7 @@ python manage.py runserver
 
 ### Frontend
 
-You can run the frontend code with these 3 lines: 🎉
+Navigate to the frontend directory, install dependencies, and run the frontend:
 
 ```bash
 cd frontend
