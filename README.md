@@ -36,10 +36,10 @@ npm install
 npm run dev
 ```
 
-## 📁 Architecture
-<img width="200" alt="Jammini logo" src="https://github.com/user-attachments/assets/f6883d4a-af4b-4eb8-b3d8-2f9f596cb572">
+## 🧱 Architecture
+<img alt="Jammini logo" src="https://github.com/user-attachments/assets/f6883d4a-af4b-4eb8-b3d8-2f9f596cb572">
 
-## 🧱 Schema
+## 📁 Schema
 
 ### User Table
 
