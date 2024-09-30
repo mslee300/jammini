@@ -1,37 +1,38 @@
 <h1 align="center"> Jammini </h1><br>
 <p align="center">
-    <img width="300" alt="Screen Shot 2023-03-09 at 5 33 56 AM" src="https://user-images.githubusercontent.com/55467050/230255801-9be4ef4a-3f35-432a-9b0c-59a5e5bb5786.png">
+    <img width="300" alt="Jammini logo" src="https://github.com/user-attachments/assets/11a759b2-0b44-4e62-8746-841df3634cfd">
 </p>
 
 <p align="center"> 
-Get motivational messages from AI. 
+Make English Learning Addictive Fun.
 </p>
 
-## Introduction
+## ⚡️ Quick start
 
-It's frustrating trying to meet your goal sometimes isn't it? Grandma AI can help you in those situations by providing excellent motivational messages just for you!
+### Backend
 
-<div align="center">
-  <video src="https://user-images.githubusercontent.com/55467050/230217769-987d8383-6f92-4a4d-b83f-aea7046488c7.mp4" />
-</div>
-                                                                                                                  
-## Features
+First,set up a virtual environment and download required files:
 
-A few of the things you can do with Grandma AI:
+```bash
+cd backend
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+```
 
-* Get AI generated messages via e-mail or text 
-* Create & edit goals 
-* Choose message intensity 
-* Login & Signup with Gmail
+Once the files are installed, you can run the backend code: 🎉
 
-<p align="center">
-  <img src = "https://user-images.githubusercontent.com/55467050/230259685-b45c0140-8099-4cf2-8b73-9bd6b106dda7.png" width=700> 
-</p> 
+```bash
+python manage.py runserver
+```
 
-<p align="center"> 
-  <img src = "https://user-images.githubusercontent.com/55467050/230259839-9c638ead-5039-428f-8fcb-803af45b126c.png" width=700> 
-</p>
+### Frontend
 
-## Feedback
+You can run the frontend code with these 3 lines: 🎉
 
-Feel free to send us feedback on [Grandma AI](mailto:minseok30086@gmail.com) or [file an issue](https://github.com/mslee300/grandma-ai/issues). Feature requests are always welcome. If you wish to contribute, please help yourself!
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
