@@ -1,0 +1,80 @@
+.dashboard-container {
+    max-width: 420px;
+    min-height: 100vh;
+    height: auto;
+    background-color: #F8F8F8;
+    margin: 0px auto;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: left;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  .game-grid {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 30px;
+    background-color: #ececec;
+  }
+  
+  .game-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: left; /* Text should be left aligned */
+    padding: 20px;
+    position: relative; /* Set position relative to allow absolute positioning inside */
+    height: 150px; /* Add a fixed height to the card for more control */
+  }
+  
+  .game-card p {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 15px;  /* Align text to the top */
+    left: 15px; /* Align text to the left */
+  }
+  
+  .game-card img {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 8px; /* Align image to the bottom */
+    right: 8px; /* Align image to the right */
+  }
+  
+  .bottom-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    min-width: 400px;
+    min-height: 44px;
+    padding: 10px;
+    background-color: white;
+    border-top: 1px solid rgb(243, 243, 243);
+  }
+  
+  .bottom-nav img {
+    display: flex;
+    position: relative;
+    margin: 0px auto;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+  }
+  

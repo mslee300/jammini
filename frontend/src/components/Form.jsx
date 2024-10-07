@@ -35,24 +35,24 @@ function Form({ route, method }) {
 
   return (
     <form onSubmit={handleSubmit} className="form-container">
-      <h1>{name}</h1>
+      <h1>로그인하기</h1>
       <input
         className="form-input"
         type="text"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-        placeholder="Username"
+        placeholder="아이디"
       />
       <input
         className="form-input"
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        placeholder="Password"
+        placeholder="비밀번호"
       />
       {loading && <LoadingIndicator />}
       <button className="form-button" type="submit">
-        {name}
+        로그인하기
       </button>
     </form>
   );
