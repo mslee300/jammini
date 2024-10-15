@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Dashboard.css";
+import Navbar from "../components/Navbar";
 
 // Importing SVG images
 import FireIcon from "../assets/img/speedgame-fire.svg";
@@ -11,10 +12,10 @@ import ChainIcon from "../assets/img/20riddles-link.svg";
 import DocumentIcon from "../assets/img/wordrelay-document.svg";
 import LinkIcon from "../assets/img/20riddles-link.svg";
 
-// Bottom nav icons
-import HomeIcon from "../assets/img/home-nav.svg";
-import PlayIcon from "../assets/img/play-nav.svg";
-import SettingsIcon from "../assets/img/setting-nav.svg";
+// // Bottom nav icons
+// import HomeIcon from "../assets/img/home-nav.svg";
+// import PlayIcon from "../assets/img/play-nav.svg";
+// import SettingsIcon from "../assets/img/setting-nav.svg";
 
 function Dashboard() {
   return (
@@ -56,11 +57,7 @@ function Dashboard() {
       </div>
 
       {/* Bottom navigation */}
-      <div className="bottom-nav">
-        <img src={HomeIcon} alt="Home icon" />
-        <img src={PlayIcon} alt="Game controller icon" />
-        <img src={SettingsIcon} alt="Settings icon" />
-      </div>
+      <Navbar />
     </div>
   );
 }

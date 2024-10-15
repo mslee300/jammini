@@ -1,0 +1,30 @@
+.bottom-nav {
+  max-width: 420px;
+  height: 80px;
+  background-color: #f8f8f8;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #e3e2e0;
+}
+
+.bottom-nav a {
+  text-align: center;
+  text-decoration: none;
+  color: #929292;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.bottom-nav a.active {
+  color: #eb6e75;
+}
+
+.bottom-nav img {
+  width: 30px;
+  height: 30px;
+}
