@@ -84,7 +84,6 @@
   padding: 0; /* Remove padding to fit the elements better */
   overflow: hidden; /* To ensure button doesn't overflow */
   height: 50px;
-  
 }
 
 .generated-link-input {
@@ -117,4 +116,47 @@
 
 .copy-button:hover {
   background-color: #d85c64;
+}
+
+/* Toast Notification Styles */
+.toast-notification {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  z-index: 2000; /* Ensure it's above other elements */
+  animation: fadeInOut 3s forwards;
+}
+
+.checkmark-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Fade in and out animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(30px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(30px);
+  }
 }
