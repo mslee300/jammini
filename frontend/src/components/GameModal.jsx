@@ -1,29 +1,29 @@
 import React, { useState } from "react";
 import "../styles/GameModal.css";
-import LoadingDots from "../assets/img/3-dots-scale.svg"; // Import the SVG
-import CheckmarkIcon from "../assets/img/copy-checkmark.svg"; // Import the checkmark image
-import Waiting from "../pages/Waiting"; // Import the Waiting component
+import LoadingDots from "../assets/img/3-dots-scale.svg"; 
+import CheckmarkIcon from "../assets/img/copy-checkmark.svg"; 
+import Waiting from "../pages/Waiting"; 
 
 const GameModal = ({ isOpen, onClose, fireIcon, questionImage }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [generatedLink, setGeneratedLink] = useState("");
-  const [isToastVisible, setIsToastVisible] = useState(false); // State for toast visibility
-  const [isWaiting, setIsWaiting] = useState(false); // State to show Waiting component
+  const [isToastVisible, setIsToastVisible] = useState(false); 
+  const [isWaiting, setIsWaiting] = useState(false); 
 
   const handleButtonClick = () => {
-    setIsLoading(true); // Show loading spinner
+    setIsLoading(true); 
 
-    // Simulate an API call or a delay to generate a link
+    
     setTimeout(() => {
-      setIsLoading(false); // Stop loading spinner
+      setIsLoading(false); 
       setGeneratedLink("https://jammini.replit.app/speedgame/12345"); // Example generated link
-    }, 2000); // Simulating 2 seconds delay
+    }, 2000); 
   };
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(generatedLink);
 
-    // Show the toast notification
+    
     setIsToastVisible(true);
 
     // Hide toast after 3 seconds and THEN switch to the Waiting component
@@ -41,11 +41,11 @@ const GameModal = ({ isOpen, onClose, fireIcon, questionImage }) => {
     }
   };
 
-  // Conditionally render Waiting or the regular modal content
+  
   return (
     <div className="modal-overlay" onClick={handleOverlayClick}>
       {isWaiting ? (
-        <Waiting /> // Render the Waiting component if isWaiting is true
+        <Waiting /> 
       ) : (
         <div className="modal-content">
           <div className="modal-title-container">
