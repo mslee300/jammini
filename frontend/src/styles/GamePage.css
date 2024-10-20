@@ -188,15 +188,11 @@
   background-color: #24af88;
 }
 
+.submit-btn.incorrect {
+  background-color: #e3496c;
+}
+
 .feedback {
   font-size: 18px;
   text-align: center;
-}
-
-.correct {
-  color: #29c195;
-}
-
-.incorrect {
-  color: red;
 }

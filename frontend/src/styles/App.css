@@ -15,3 +15,8 @@ body {
 input:focus {
   border-color: #eb2930;
 }
+
+/* html,
+body {
+  overflow-y: scroll;
+} */
