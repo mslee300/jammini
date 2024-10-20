@@ -1,0 +1,89 @@
+/* CorrectAnswer Box */
+.correct-answer-box {
+  position: absolute;
+  bottom: -50px;
+  max-width: 430px;
+  height: 182px;
+  background-color: #dff6ed;
+  border-radius: 22px 22px 0px 0px;
+  color: #29c195;
+  font-size: 14px;
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  animation: slide-up 0.5s ease forwards;
+  z-index: 1;
+}
+
+/* Group the left icon and text */
+.correct-left {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.icon-left {
+  width: 30px;
+  height: 30px;
+  padding-right: 5px;
+}
+
+.icon-right {
+  width: 19px;
+  height: 19px;
+  padding: 30px 25px;
+  cursor: pointer;
+}
+
+/* IncorrectAnswer Box */
+.incorrect-answer-box {
+  position: absolute;
+  bottom: -50px;
+  max-width: 430px;
+  height: 203px;
+  background-color: #fbe4e9;
+  border-radius: 22px 22px 0px 0px;
+  color: #e3496c;
+  font-size: 14px;
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  animation: slide-up 0.5s ease forwards;
+  z-index: 1;
+}
+
+/* Group the left icon and text */
+.incorrect-left {
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+  padding: 25px 20px;
+  flex-direction: column;
+}
+
+.incorrect-left h2 {
+  margin: auto;
+}
+
+.incorrect-left p {
+  font-weight: 500;
+}
+
+.icon-and-text {
+  display: flex;
+  align-items: center;
+}
+
+/* Keyframes for sliding the box up */
+@keyframes slide-up {
+  from {
+    bottom: -50px;
+  }
+  to {
+    bottom: 0px;
+  }
+}

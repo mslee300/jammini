@@ -7,7 +7,6 @@ import BookmarkIcon from "../assets/img/bookmark.svg";
 import "../styles/GamePage.css";
 
 const GamePage = () => {
-  // Dummy data to simulate backend response
   const dummyQuestion = {
     id: 1,
     text: "The event was ___ because of the bad weather.",
@@ -22,8 +21,9 @@ const GamePage = () => {
 
   // Handle option selection
   const handleOptionSelect = (option) => {
-    setSelectedOption(option);
-    setIsSubmitted(false); // Reset submission status when a new option is selected
+    if (!isSubmitted) {
+      setSelectedOption(option);
+    }
   };
 
   // Handle submit and check if the selected option is correct
@@ -80,6 +80,7 @@ const GamePage = () => {
         </p>
       </div>
 
+      {/* Options Section */}
       <div className="options">
         {dummyQuestion.options.map((option, index) => (
           <button
@@ -88,16 +89,27 @@ const GamePage = () => {
               isSubmitted && selectedOption === option ? "selected" : ""
             }`}
             onClick={() => handleOptionSelect(option)}
+            disabled={isSubmitted} // Disable option buttons after submission
           >
             {option}
           </button>
         ))}
       </div>
 
-      <button className="submit-btn" onClick={handleSubmit}>
-        {isCorrect === null ? "CHECK!" : "CONTINUE"}
+      {/* Submit Button */}
+      <button
+        className={`submit-btn ${isCorrect === false ? "incorrect" : ""}`}
+        onClick={handleSubmit}
+        disabled={isSubmitted && isCorrect !== null} // Disable after submission
+      >
+        {isCorrect === null
+          ? "CHECK!"
+          : isCorrect === false
+          ? "GOT IT"
+          : "CONTINUE"}
       </button>
 
+      {/* Feedback Components */}
       {isCorrect === true && <CorrectAnswer />}
       {isCorrect === false && (
         <IncorrectAnswer correctAnswer={dummyQuestion.correct_answer} />
