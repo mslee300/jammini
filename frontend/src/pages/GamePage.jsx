@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import CorrectAnswer from "../components/CorrectAnswer";
 import IncorrectAnswer from "../components/IncorrectAnswer";
+import ExitIcon from "../assets/img/exit.svg";
+import SettingsIcon from "../assets/img/settings.svg";
+import BookmarkIcon from "../assets/img/bookmark.svg";
 import "../styles/GamePage.css";
 
 const GamePage = () => {
@@ -33,7 +36,22 @@ const GamePage = () => {
 
   return (
     <div className="game-container">
-      <div className="question-section">
+      {/* Header Section */}
+      <div className="game-header">
+        <img src={ExitIcon} alt="Exit" className="header-icon exit-icon" />
+        <div className="progress-bar">
+          <div className="progress-fill" style={{ width: "50%" }}></div>
+        </div>
+        <img
+          src={SettingsIcon}
+          alt="Settings"
+          className="header-icon settings-icon"
+        />
+      </div>
+
+      {/* Question Section */}
+      <div className={`question-section ${isSubmitted ? "submitted" : ""}`}>
+        <img src={BookmarkIcon} alt="Bookmark" className="bookmark-icon" />
         <h1>
           The event was{" "}
           <span
