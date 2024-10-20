@@ -7,7 +7,8 @@ import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./pages/Dashboard";
 import Waiting from "./pages/Waiting";
-import './styles/App.css';
+import GamePage from "./pages/GamePage";
+import "./styles/App.css";
 
 function Logout() {
   localStorage.clear();
@@ -35,6 +36,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<RegisterAndLogout />} />
+        <Route path="/gamepage" element={<GamePage />} />
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
