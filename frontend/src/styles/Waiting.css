@@ -50,3 +50,45 @@
 .exit-button:hover {
   background-color: #ffdcdc;
 }
+
+.waiting-title.ready {
+  font-size: 36px; /* Similar to the 'READY?' and countdown size in your images */
+  font-weight: bold;
+  color: #e93e47; /* Adjust the red to match your design */
+  margin: 0;
+  padding-left: 5px; /* Move the 'READY?' text slightly to the right */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+}
+
+.countdown-circle {
+  font-size: 4.5rem; /* Size of the countdown numbers */
+  font-weight: bold;
+  color: #e93e47;
+  margin: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  padding-left: 5px; /* Move the countdown text slightly to the right */
+}
+
+.countdown-circle::before,
+.waiting-title.ready::before {
+  content: '';
+  display: block;
+  width: 150px;  /* Circle size */
+  height: 150px; /* Circle size */
+  border-radius: 50%;
+  border: 5px solid #e93e47; /* Match red color with text */
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

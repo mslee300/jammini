@@ -86,7 +86,15 @@ const GamePage = () => {
           <button
             key={index}
             className={`option ${
-              isSubmitted && selectedOption === option ? "selected" : ""
+              isSubmitted
+                ? selectedOption === option
+                  ? isCorrect
+                    ? "correct-option"
+                    : "incorrect-option"
+                  : ""
+                : selectedOption === option
+                ? "selected"
+                : ""
             }`}
             onClick={() => handleOptionSelect(option)}
             disabled={isSubmitted} // Disable option buttons after submission
@@ -103,10 +111,10 @@ const GamePage = () => {
         disabled={isSubmitted && isCorrect !== null} // Disable after submission
       >
         {isCorrect === null
-          ? "CHECK!"
+          ? "정답 확인!"
           : isCorrect === false
-          ? "GOT IT"
-          : "CONTINUE"}
+          ? "정답이에요!"
+          : "계속 풀기"}
       </button>
 
       {/* Feedback Components */}

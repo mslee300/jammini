@@ -156,15 +156,27 @@
   transition: background-color 0.3s ease;
 }
 
+/* Option button styles when selected but not yet submitted */
 .option.selected {
-  background-color: #bbc8ff;
-  color: #1c49ff;
+  background-color: #FBE4E9; /* Light green for selection */
+  color: #E93E47; /* Green text for selection */
   font-weight: 700;
 }
 
-.options button:hover {
-  background-color: #bbc8ff;
+/* Option button styles when correct */
+.option.correct-option {
+  background-color: #29c195; /* Green for correct */
+  color: white; /* White text for correct */
+  font-weight: 700;
 }
+
+/* Option button styles when incorrect */
+.option.incorrect-option {
+  background-color: #e3496c; /* Red for incorrect */
+  color: white; /* White text for incorrect */
+  font-weight: 700;
+}
+
 
 .submit-btn {
   background-color: #29c195;

@@ -1,10 +1,10 @@
 import axios from "axios";
 import { ACCESS_TOKEN } from "./constants";
 
-const apiUrl = "/choreo-apis/awbo/backend/rest-api-be2/v1.0";
+const apiUrl = "http://127.0.0.1:8000";  // Django backend URL for local development
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL : apiUrl,
+  baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL : apiUrl, // This ensures it checks the environment variable first
 });
 
 api.interceptors.request.use(
@@ -13,6 +13,7 @@ api.interceptors.request.use(
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
+    config.headers['X-Requested-With'] = 'XMLHttpRequest';  // Add this header to indicate an AJAX request
     return config;
   },
   (error) => {

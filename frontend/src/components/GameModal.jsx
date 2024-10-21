@@ -26,21 +26,39 @@ const GameModal = ({ isOpen, onClose, fireIcon, questionImage }) => {
         setIsLoading(false);
       });
   };
-  
+
+  // const copyToClipboard = () => {
+  //   navigator.clipboard.writeText(generatedLink);
+
+  //   setIsToastVisible(true);
+
+  //   // After the 3-second delay, navigate to the generated URL
+  //   setTimeout(() => {
+  //     setIsToastVisible(false); // Hide the toast notification
+  //     window.location.href = generatedLink; // Redirect to the generated link
+  //   }, 2500); // 3-second delay
+  // };
+
+  // if (!isOpen) return null;
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(generatedLink);
-
+    // Create a modified version of the link strictly for copying
+    const modifiedLinkForClipboard = generatedLink.replace(/\/game\/speedgame\/\d+\//, '/game/speedgame/1/');
+  
+    // Copy the modified link to the clipboard, but keep the original for redirection
+    navigator.clipboard.writeText(modifiedLinkForClipboard);
+  
     setIsToastVisible(true);
-
+  
     // After the 3-second delay, navigate to the generated URL
     setTimeout(() => {
       setIsToastVisible(false); // Hide the toast notification
-      window.location.href = generatedLink; // Redirect to the generated link
+      window.location.href = generatedLink; // Redirect to the original generated link
     }, 2500); // 3-second delay
   };
-
+  
   if (!isOpen) return null;
+  
 
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) {
