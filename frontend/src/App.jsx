@@ -36,6 +36,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<RegisterAndLogout />} />
+        {/* <Route path="/game/speedgame/:userId/session:sessionId" element={<Waiting />} /> */}
+        <Route path="/game/speedgame/:userId/session/:sessionId" element={<Waiting />} />
         <Route path="/gamepage" element={<GamePage />} />
         <Route path="*" element={<NotFound />}></Route>
       </Routes>

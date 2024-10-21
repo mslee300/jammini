@@ -11,7 +11,6 @@ import TimerIcon from "../assets/img/countdown-watch.svg";
 import SpeechBubbleIcon from "../assets/img/wordrelay-document.svg";
 import ChainIcon from "../assets/img/20riddles-link.svg";
 
-
 function Dashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -28,53 +27,60 @@ function Dashboard() {
       <h1>
         Multiplayer<span>Singleplayer</span>
       </h1>
-      
+
       <div className="game-grid">
         <div className="game-card" onClick={openModal}>
           <p>스피드게임</p>
           <img src={FireIcon} alt="Fire icon" />
         </div>
 
-        <NavLink to="/" className="game-card">
+        <NavLink to="/" className="game-card coming-soon">
           <p>카운트다운</p>
           <img src={TimerIcon} alt="Timer icon" />
+          <div className="coming-soon-overlay">COMING<br />SOON</div>
         </NavLink>
 
-        <NavLink to="/" className="game-card">
+        <NavLink to="/" className="game-card coming-soon">
           <p>끝말잇기</p>
           <img src={SpeechBubbleIcon} alt="Speech bubble icon" />
+          <div className="coming-soon-overlay">COMING<br />SOON</div>
         </NavLink>
 
-        <NavLink to="/" className="game-card">
+        <NavLink to="/" className="game-card coming-soon">
           <p>스무고개</p>
           <img src={ChainIcon} alt="Chain icon" />
+          <div className="coming-soon-overlay">COMING<br />SOON</div>
         </NavLink>
 
-        <NavLink to="/" className="game-card">
+        <NavLink to="/" className="game-card coming-soon">
           <p>문장잇기</p>
           <img src={ConversationIcon} alt="Conversation icon" />
+          <div className="coming-soon-overlay">COMING<br />SOON</div>
         </NavLink>
 
-        <NavLink to="/" className="game-card">
+        <NavLink to="/" className="game-card coming-soon">
           <p>발음 대결</p>
           <img src={MicrophoneIcon} alt="Microphone icon" />
+          <div className="coming-soon-overlay">COMING<br />SOON</div>
         </NavLink>
 
-        <NavLink to="/" className="game-card">
+        <NavLink to="/" className="game-card coming-soon">
           <p>스펠링 대결</p>
           <img src={FireIcon} alt="Document icon" />
+          <div className="coming-soon-overlay">COMING<br />SOON</div>
         </NavLink>
 
-        <NavLink to="/" className="game-card">
+        <NavLink to="/" className="game-card coming-soon">
           <p>동반의어 대결</p>
           <img src={MicrophoneIcon} alt="Link icon" />
+          <div className="coming-soon-overlay">COMING<br />SOON</div>
         </NavLink>
       </div>
 
       {/* Game modal for Speed Game */}
-      <GameModal 
-        isOpen={isModalOpen} 
-        onClose={closeModal} 
+      <GameModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
         fireIcon={FireIcon}
         questionImage={QuestionBox}
       />
