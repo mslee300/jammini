@@ -4,7 +4,7 @@ import "../styles/Dashboard.css";
 import Navbar from "../components/Navbar";
 import GameModal from "../components/GameModal";
 import FireIcon from "../assets/img/speedgame-fire.svg";
-import QuestionBox from "../assets/img/question-box.svg"; // Example question box image
+import QuestionBox from "../assets/img/question-box.svg"; 
 import MicrophoneIcon from "../assets/img/pronounciation-mic.svg";
 import ConversationIcon from "../assets/img/wordcollab-balloon.svg";
 import TimerIcon from "../assets/img/countdown-watch.svg";
@@ -71,7 +71,7 @@ function Dashboard() {
         </NavLink>
 
         <NavLink to="/" className="game-card coming-soon">
-          <p>동반의어 대결</p>
+          <p>동/반의어 대결</p>
           <img src={MicrophoneIcon} alt="Link icon" />
           <div className="coming-soon-overlay">COMING<br />SOON</div>
         </NavLink>
