@@ -10,6 +10,9 @@ import Waiting from "./pages/Waiting";
 import GamePage from "./pages/GamePage";
 import ReviewPage from "./pages/ReviewPage";
 import ReviewQuestionPage from "./pages/ReviewQuestionPage";
+import Grading from "./pages/Grading";
+import WinnerPage from "./pages/WinnerPage";
+import LoserPage from "./pages/LoserPage";
 import "./styles/App.css";
 
 function Logout() {
@@ -45,6 +48,9 @@ function App() {
         <Route path="/gamepage" element={<GamePage />} />
         <Route path="/reviewpage" element={<ReviewPage />} />
         <Route path="/reviewquestionpage" element={<ReviewQuestionPage />} />
+        <Route path="/grading" element={<Grading />} />
+        <Route path="/winnerpage" element={<WinnerPage />} />
+        <Route path="/loserpage" element={<LoserPage />} />
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>

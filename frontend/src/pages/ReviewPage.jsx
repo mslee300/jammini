@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import RecentIcon from "../assets/img/recent.svg";
 import CheckIcon from "../assets/img/check-circle.svg";
@@ -14,7 +15,8 @@ const ReviewPage = () => {
       correct: true,
     },
     {
-      question: "The CEO has already _______ the company’s new strategy before the meeting last week.",
+      question:
+        "The CEO has already _______ the company’s new strategy before the meeting last week.",
       options: "1. revise 2. revised 3. revises 4. revising",
       correct: false,
     },
@@ -23,7 +25,6 @@ const ReviewPage = () => {
       options: "1. softly 2. moderately 3. harshly 4. quickly",
       correct: true,
     },
-
   ];
 
   return (
@@ -43,23 +44,30 @@ const ReviewPage = () => {
       </div>
       <div className="reviewList">
         {reviews.map((review, index) => (
-          <div key={index} className="reviewCard">
-            <div className="reviewText">
-              <p className="question">{review.question}</p>
-              <p className="options">{review.options}</p>
+          <NavLink
+            to="/reviewquestionpage"
+            key={index}
+            className="reviewCardLink"
+            activeClassName="activeReviewCardLink"
+          >
+            <div className="reviewCard">
+              <div className="reviewText">
+                <p className="question">{review.question}</p>
+                <p className="options">{review.options}</p>
+              </div>
+              <div className="result">
+                {review.correct ? (
+                  <img src={CheckIcon} alt="Correct" className="correctIcon" />
+                ) : (
+                  <img
+                    src={CrossIcon3}
+                    alt="Incorrect"
+                    className="incorrectIcon"
+                  />
+                )}
+              </div>
             </div>
-            <div className="result">
-              {review.correct ? (
-                <img src={CheckIcon} alt="Correct" className="correctIcon" />
-              ) : (
-                <img
-                  src={CrossIcon3}
-                  alt="Incorrect"
-                  className="incorrectIcon"
-                />
-              )}
-            </div>
-          </div>
+          </NavLink>
         ))}
       </div>
     </div>

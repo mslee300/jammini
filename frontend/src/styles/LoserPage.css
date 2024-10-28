@@ -1,0 +1,64 @@
+.loserpage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 16px;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  padding-bottom: 140px;
+}
+
+.loser-image {
+  width: 180px; /* Adjust width as necessary */
+  height: auto;
+}
+
+.loser-korean-text {
+  font-family: "Pretendard Variable", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #000000; /* Black color */
+  padding: 0;
+  margin-top: 25px;
+}
+
+.loser-korean-subtext {
+  font-size: 22px;
+  font-weight: 400;
+  color: #000000; /* Black color */
+  padding: 0;
+  margin-top: 10px;
+}
+
+.exit-game-button {
+  position: fixed;
+  background-color: #ededed;
+  color: #545454;
+  font-weight: bold;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 380px;
+  bottom: 30px;
+}
+
+.replay-button {
+  position: absolute;
+  background-color: #e93e47;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 380px;
+  bottom: 90px;
+}

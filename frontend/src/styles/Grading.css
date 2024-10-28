@@ -1,0 +1,35 @@
+.grading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 16px;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+  }
+  
+  .grading-image {
+    width: 180px; /* Adjust width as necessary */
+    height: auto;
+  }
+  
+  .grading-korean-text {
+    font-family: "Pretendard Variable", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #000000; /* Black color */
+  }
+  
+  .grading-english-text {
+    font-family: "Pretendard Variable", sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    color: #EB6E75; /* Provided color code */
+    max-width: 50%;
+    line-height: 2;
+    text-align: center;
+  }  
