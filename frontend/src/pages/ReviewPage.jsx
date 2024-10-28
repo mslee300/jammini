@@ -33,6 +33,16 @@ const ReviewPage = () => {
       options: "1. canceled 2. rescheduled 3. delayed 4. postponed",
       correct: true,
     },
+    {
+      question: "The event was ___ because of the bad weather.",
+      options: "1. canceled 2. rescheduled 3. delayed 4. postponed",
+      correct: true,
+    },
+    {
+      question: "The event was ___ because of the bad weather.",
+      options: "1. canceled 2. rescheduled 3. delayed 4. postponed",
+      correct: true,
+    },
   ];
 
   return (
