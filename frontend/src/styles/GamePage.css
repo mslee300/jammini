@@ -40,6 +40,7 @@
 }
 
 .progress-fill {
+  width: 25%;
   height: 100%;
   background-color: #e93e47;
   border-radius: 6px;
@@ -48,7 +49,7 @@
 
 /* Add a rectangular border around the question section */
 .question-section {
-  border: 5px solid #e5e5e5;
+  border: 1px solid #e5e5e5;
   border-radius: 16px;
   padding: 10px 0;
   width: 100%;
@@ -79,7 +80,7 @@
   font-weight: 700;
   line-height: 38.19px;
   text-align: center;
-  color: #e93e47;
+  color: #000000;
 }
 
 .question-section p {
@@ -165,21 +166,38 @@
 
 /* Option button styles when correct */
 .option.correct-option {
-  background-color: #29c195; /* Green for correct */
-  color: white; /* White text for correct */
+  background-color: #DFF6EF; /* Green for correct */
+  color: #29C195; /* White text for correct */
   font-weight: 700;
 }
 
 /* Option button styles when incorrect */
 .option.incorrect-option {
-  background-color: #e3496c; /* Red for incorrect */
-  color: white; /* White text for incorrect */
+  background-color: #FBE4E9; /* Light green for selection */
+  color: #E93E47; /* Green text for selection */
   font-weight: 700;
+}
+
+.incorrect-answer {
+  color: #E93E47; /* Red color for incorrect answer */
+  font-weight: bold;
+}
+
+/* Initial styling for submit button when no answer is selected */
+.submit-btn.initial {
+  background-color: #E5E5E5;
+  color: #AFAFAF;
+  cursor: not-allowed; /* Prevents the pointer cursor */
+}
+
+/* Remove hover effect for initial state */
+.submit-btn.initial:hover {
+  background-color: #E5E5E5; /* Keep the background color unchanged */
 }
 
 
 .submit-btn {
-  background-color: #29c195;
+  background-color: #E93E47;
   color: white;
   padding: 12px;
   width: 100%;
@@ -197,11 +215,16 @@
 }
 
 .submit-btn:hover {
-  background-color: #24af88;
+  background-color: #E93E47;
+}
+
+.submit-btn.correct {
+  background-color: #29C195;
+  color: white;
 }
 
 .submit-btn.incorrect {
-  background-color: #e3496c;
+  background-color: #E93E47;
 }
 
 .feedback {

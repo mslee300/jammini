@@ -8,7 +8,7 @@ const CorrectAnswer = () => {
     <div className="correct-answer-box">
       <div className="correct-left">
         <img src={CheckIcon} alt="Checkmark" className="icon-left" />
-        <h2>Correct!</h2>
+        <h2>정답이에요!</h2>
       </div>
       <img src={FlagIcon} alt="Flag" className="icon-right" />
     </div>

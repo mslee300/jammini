@@ -7,17 +7,40 @@ import BookmarkIcon from "../assets/img/bookmark.svg";
 import "../styles/GamePage.css";
 
 const GamePage = () => {
-  const dummyQuestion = {
-    id: 1,
-    text: "The event was ___ because of the bad weather.",
-    translation: "날씨가 안 좋아서 행사가 취소됐어요.",
-    options: ["canceled", "rescheduled", "delayed", "postponed"],
-    correct_answer: "canceled",
-  };
+  const questions = [
+    {
+      id: 1,
+      text: "The event was ___ because of the bad weather.",
+      translation: "날씨가 안 좋아서 행사가 취소됐어요.",
+      options: ["canceled", "rescheduled", "delayed", "postponed"],
+      correct_answer: "canceled",
+    },
+    {
+      id: 2,
+      text: "The CEO has already _______ the company’s new strategy before the meeting last week.",
+      options: ["revise", "revised", "revises", "revising"],
+      correct_answer: "revised",
+    },
+    {
+      id: 3,
+      text: "What does the word 'severely' mean?",
+      options: ["softly", "moderately", "harshly", "quickly"],
+      correct_answer: "harshly",
+    },
+    {
+      id: 4,
+      text: "The manager ____ the staff ____ their reports ____ the end ____.",
+      translation: "Choose the wrong answer.",
+      options: ["asked", "to submit", "before", "of the day"],
+      correct_answer: "to submit",
+    },
+  ];
 
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
-  const [isSubmitted, setIsSubmitted] = useState(false); // To check if "CHECK!" button is clicked
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const currentQuestion = questions[currentQuestionIndex];
 
   // Handle option selection
   const handleOptionSelect = (option) => {
@@ -29,60 +52,60 @@ const GamePage = () => {
   // Handle submit and check if the selected option is correct
   const handleSubmit = () => {
     if (selectedOption) {
-      setIsCorrect(selectedOption === dummyQuestion.correct_answer);
-      setIsSubmitted(true); // Set to true when the answer is submitted
+      if (selectedOption === currentQuestion.correct_answer) {
+        setIsCorrect(true);
+      } else {
+        setIsCorrect(false);
+      }
+      setIsSubmitted(true);
     }
+  };
+
+  // Handle moving to the next question after a correct answer
+  const handleNextQuestion = () => {
+    setSelectedOption(null);
+    setIsCorrect(null);
+    setIsSubmitted(false);
+
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      setCurrentQuestionIndex(0); // Reset to the first question if all are done
+    }
+  };
+
+  // Handle resetting the question state on incorrect answer
+  const handleRetry = () => {
+    setSelectedOption(null);
+    setIsCorrect(null);
+    setIsSubmitted(false); // Resets submission state so user can try again
   };
 
   return (
     <div className="game-container">
-      {/* Header Section */}
       <div className="game-header">
         <img src={ExitIcon} alt="Exit" className="header-icon exit-icon" />
         <div className="progress-bar">
-          <div className="progress-fill" style={{ width: "50%" }}></div>
+          <div
+            className="progress-fill"
+            style={{ width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }}
+          ></div>
         </div>
-        <img
-          src={SettingsIcon}
-          alt="Settings"
-          className="header-icon settings-icon"
-        />
+        <img src={SettingsIcon} alt="Settings" className="header-icon settings-icon" />
       </div>
 
-      {/* Question Section */}
       <div className={`question-section ${isSubmitted ? "submitted" : ""}`}>
         <img src={BookmarkIcon} alt="Bookmark" className="bookmark-icon" />
         <h1>
-          The event was{" "}
-          <span
-            className={`answer-box ${
-              isSubmitted && isCorrect ? "correct-answer" : ""
-            }`}
-          >
-            {selectedOption ? (
-              selectedOption
-            ) : (
-              <span className="blank-box">___</span>
-            )}
-          </span>{" "}
-          because of the bad weather.
+          {currentQuestion.text.replace("___", selectedOption || "___")}
         </h1>
-        <p>
-          날씨가 안 좋아서 행사가{" "}
-          <span
-            className={`translation-answer ${
-              isCorrect === true ? "correct-translation" : ""
-            }`}
-          >
-            취소됐
-          </span>
-          어요.
-        </p>
+        {currentQuestion.translation && (
+          <p>{currentQuestion.translation}</p>
+        )}
       </div>
 
-      {/* Options Section */}
       <div className="options">
-        {dummyQuestion.options.map((option, index) => (
+        {currentQuestion.options.map((option, index) => (
           <button
             key={index}
             className={`option ${
@@ -97,31 +120,36 @@ const GamePage = () => {
                 : ""
             }`}
             onClick={() => handleOptionSelect(option)}
-            disabled={isSubmitted} // Disable option buttons after submission
+            disabled={isSubmitted} // Disable options after submission
           >
             {option}
           </button>
         ))}
       </div>
 
-      {/* Submit Button */}
       <button
-        className={`submit-btn ${isCorrect === false ? "incorrect" : ""}`}
-        onClick={handleSubmit}
-        disabled={isSubmitted && isCorrect !== null} // Disable after submission
+        className={`submit-btn ${selectedOption ? "" : "initial"} ${
+          isCorrect === false ? "incorrect" : ""
+        } ${isCorrect === true ? "correct" : ""}`}
+        onClick={
+          isCorrect === true
+            ? handleNextQuestion // Move to the next question if correct
+            : isCorrect === false
+            ? handleRetry        // Reset for retry if incorrect
+            : handleSubmit       // Submit if checking answer
+        }
+        disabled={!selectedOption && !isSubmitted} // Disable if no selection or already submitted
       >
         {isCorrect === null
-          ? "정답 확인!"
+          ? "정답 확인!"              // Initial check answer state
           : isCorrect === false
-          ? "정답이에요!"
+          ? "확인했어요"              // Retry state
           : "계속 풀기"}
       </button>
 
       {/* Feedback Components */}
       {isCorrect === true && <CorrectAnswer />}
-      {isCorrect === false && (
-        <IncorrectAnswer correctAnswer={dummyQuestion.correct_answer} />
-      )}
+      {isCorrect === false && <IncorrectAnswer correctAnswer={currentQuestion.correct_answer} />}
     </div>
   );
 };

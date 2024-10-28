@@ -9,9 +9,9 @@ const InCorrectAnswer = ({ correctAnswer }) => {
       <div className="incorrect-left">
         <div className="icon-and-text">
           <img src={CrossIcon} alt="Cross" className="icon-left" />
-          <h2>Incorrect</h2>
+          <h2>오답이에요</h2>
         </div>
-        <p>Answer: {correctAnswer}</p>
+        <p>정답: {correctAnswer}</p>
       </div>
       <img src={FlagIcon} alt="Flag" className="icon-right" />
     </div>
