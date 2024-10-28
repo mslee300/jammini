@@ -14,35 +14,16 @@ const ReviewPage = () => {
       correct: true,
     },
     {
-      question: "The event was ___ because of the bad weather.",
-      options: "1. canceled 2. rescheduled 3. delayed 4. postponed",
+      question: "The CEO has already _______ the company’s new strategy before the meeting last week.",
+      options: "1. revise 2. revised 3. revises 4. revising",
       correct: false,
     },
     {
-      question: "The event was ___ because of the bad weather.",
-      options: "1. canceled 2. rescheduled 3. delayed 4. postponed",
+      question: "What does the word 'severely' mean",
+      options: "1. softly 2. moderately 3. harshly 4. quickly",
       correct: true,
     },
-    {
-      question: "The event was ___ because of the bad weather.",
-      options: "1. canceled 2. rescheduled 3. delayed 4. postponed",
-      correct: true,
-    },
-    {
-      question: "The event was ___ because of the bad weather.",
-      options: "1. canceled 2. rescheduled 3. delayed 4. postponed",
-      correct: true,
-    },
-    {
-      question: "The event was ___ because of the bad weather.",
-      options: "1. canceled 2. rescheduled 3. delayed 4. postponed",
-      correct: true,
-    },
-    {
-      question: "The event was ___ because of the bad weather.",
-      options: "1. canceled 2. rescheduled 3. delayed 4. postponed",
-      correct: true,
-    },
+
   ];
 
   return (
