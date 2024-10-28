@@ -77,6 +77,7 @@
 .question-section h1 {
   font-family: "Pretendard Variable", sans-serif;
   font-size: 32px;
+  margin-bottom: 40px;
   font-weight: 700;
   line-height: 38.19px;
   text-align: center;
@@ -89,7 +90,7 @@
   font-weight: 500;
   line-height: 19.09px;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 /* Gray box for the blank part in the English sentence */
@@ -97,7 +98,7 @@
   display: inline-block;
   background-color: #e6e6e6;
   border-radius: 8px;
-  width: 143px;
+  width: 120px;
   height: 39px;
   vertical-align: middle;
   color: transparent;

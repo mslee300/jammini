@@ -17,7 +17,7 @@ const GamePage = () => {
     },
     {
       id: 2,
-      text: "The CEO has already _______ the company’s new strategy before the meeting last week.",
+      text: "The CEO has already ___ the company’s new strategy before the meeting last week.",
       options: ["revise", "revised", "revises", "revising"],
       correct_answer: "revised",
     },
@@ -26,13 +26,6 @@ const GamePage = () => {
       text: "What does the word 'severely' mean?",
       options: ["softly", "moderately", "harshly", "quickly"],
       correct_answer: "harshly",
-    },
-    {
-      id: 4,
-      text: "The manager ____ the staff ____ their reports ____ the end ____.",
-      translation: "Choose the wrong answer.",
-      options: ["asked", "to submit", "before", "of the day"],
-      correct_answer: "to submit",
     },
   ];
 
@@ -52,11 +45,7 @@ const GamePage = () => {
   // Handle submit and check if the selected option is correct
   const handleSubmit = () => {
     if (selectedOption) {
-      if (selectedOption === currentQuestion.correct_answer) {
-        setIsCorrect(true);
-      } else {
-        setIsCorrect(false);
-      }
+      setIsCorrect(selectedOption === currentQuestion.correct_answer);
       setIsSubmitted(true);
     }
   };
@@ -88,20 +77,58 @@ const GamePage = () => {
         <div className="progress-bar">
           <div
             className="progress-fill"
-            style={{ width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }}
+            style={{
+              width: `${
+                ((currentQuestionIndex + 1) / questions.length) * 100
+              }%`,
+            }}
           ></div>
         </div>
-        <img src={SettingsIcon} alt="Settings" className="header-icon settings-icon" />
+        <img
+          src={SettingsIcon}
+          alt="Settings"
+          className="header-icon settings-icon"
+        />
       </div>
 
       <div className={`question-section ${isSubmitted ? "submitted" : ""}`}>
         <img src={BookmarkIcon} alt="Bookmark" className="bookmark-icon" />
         <h1>
-          {currentQuestion.text.replace("___", selectedOption || "___")}
+          {currentQuestion.text.split("___").map((part, index) => (
+            <React.Fragment key={index}>
+              {part}
+              {/* Render answer box only once when there's a blank to fill */}
+              {index < currentQuestion.text.split("___").length - 1 && (
+                <span
+                  className={`answer-box ${
+                    isSubmitted
+                      ? isCorrect
+                        ? "correct-answer"
+                        : "incorrect-answer"
+                      : ""
+                  }`}
+                >
+                  {selectedOption ? (
+                    <span
+                      className={`answer-text ${
+                        isSubmitted
+                          ? isCorrect
+                            ? "correct-answer-text"
+                            : "incorrect-answer-text"
+                          : ""
+                      }`}
+                    >
+                      {selectedOption}
+                    </span>
+                  ) : (
+                    <span className="blank-box">___</span>
+                  )}
+                </span>
+              )}
+            </React.Fragment>
+          ))}
         </h1>
-        {currentQuestion.translation && (
-          <p>{currentQuestion.translation}</p>
-        )}
+        {currentQuestion.translation && <p>{currentQuestion.translation}</p>}
       </div>
 
       <div className="options">
@@ -135,21 +162,23 @@ const GamePage = () => {
           isCorrect === true
             ? handleNextQuestion // Move to the next question if correct
             : isCorrect === false
-            ? handleRetry        // Reset for retry if incorrect
-            : handleSubmit       // Submit if checking answer
+            ? handleRetry // Reset for retry if incorrect
+            : handleSubmit // Submit if checking answer
         }
         disabled={!selectedOption && !isSubmitted} // Disable if no selection or already submitted
       >
         {isCorrect === null
-          ? "정답 확인!"              // Initial check answer state
+          ? "정답 확인!" // Initial check answer state
           : isCorrect === false
-          ? "확인했어요"              // Retry state
+          ? "확인했어요" // Retry state
           : "계속 풀기"}
       </button>
 
       {/* Feedback Components */}
       {isCorrect === true && <CorrectAnswer />}
-      {isCorrect === false && <IncorrectAnswer correctAnswer={currentQuestion.correct_answer} />}
+      {isCorrect === false && (
+        <IncorrectAnswer correctAnswer={currentQuestion.correct_answer} />
+      )}
     </div>
   );
 };

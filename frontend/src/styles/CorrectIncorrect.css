@@ -17,6 +17,13 @@
   z-index: 1;
 }
 
+.answer-text {
+  color: #000;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 0;
+}
+
 /* Group the left icon and text */
 .correct-left {
   display: flex;
@@ -37,6 +44,39 @@
   cursor: pointer;
 }
 
+.answer-box {
+  background-color: #e6e6e6;
+  border-radius: 8px;
+  padding: 0 8px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Blank placeholder styling */
+.blank-box {
+  display: inline-block;
+  width: 60px; /* Adjust this width as necessary */
+  height: 24px;
+  background-color: #e6e6e6;
+  border-radius: 8px;
+}
+
+/* Correct answer styling */
+.correct-answer {
+  background-color: #dff6ed;
+}
+
+.correct-answer-text {
+  color: #29c195; /* Green color for correct answer text */
+  font-weight: 700;
+}
+
+/* Incorrect answer styling */
+.incorrect-answer {
+  background-color: #fbe4e9;
+}
+
 /* IncorrectAnswer Box */
 .incorrect-answer-box {
   position: absolute;
@@ -45,7 +85,7 @@
   height: 200px;
   background-color: #fbe4e9;
   border-radius: 22px 22px 0px 0px;
-  color: #e3496c;
+  color: #E93E47;
   font-size: 14px;
   font-weight: 700;
   width: 100%;
@@ -54,6 +94,11 @@
   align-items: flex-start;
   animation: slide-up 0.5s ease forwards;
   z-index: 1;
+}
+
+.incorrect-answer-text {
+  color: #E93E47; /* Red color for incorrect answer text */
+  font-weight: 700;
 }
 
 /* Group the left icon and text */
