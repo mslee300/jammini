@@ -8,6 +8,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./pages/Dashboard";
 import Waiting from "./pages/Waiting";
 import GamePage from "./pages/GamePage";
+import ReviewPage from "./pages/ReviewPage";
 import "./styles/App.css";
 
 function Logout() {
@@ -41,6 +42,7 @@ function App() {
           element={<Waiting />}
         />
         <Route path="/gamepage" element={<GamePage />} />
+        <Route path="/reviewpage" element={<ReviewPage />} />
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
