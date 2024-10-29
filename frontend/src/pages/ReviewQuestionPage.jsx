@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import CorrectAnswer from "../components/CorrectAnswer";
 import IncorrectAnswer from "../components/IncorrectAnswer";
 import ExitIcon from "../assets/img/exit.svg";
@@ -7,6 +8,8 @@ import BookmarkIcon from "../assets/img/bookmark.svg";
 import "../styles/GamePage.css";
 
 const ReviewQuestionPage = () => {
+  const navigate = useNavigate();
+
   const questions = [
     {
       id: 1,
@@ -57,10 +60,19 @@ const ReviewQuestionPage = () => {
     setIsSubmitted(false); // Resets submission state so user can try again
   };
 
+  const handleExit = () => {
+    navigate("/reviewpage");
+  };
+
   return (
     <div className="game-container">
       <div className="game-header">
-        <img src={ExitIcon} alt="Exit" className="header-icon exit-icon" />
+        <img
+          src={ExitIcon}
+          alt="Exit"
+          className="header-icon exit-icon"
+          onClick={handleExit}
+        />
         <div className="progress-bar">
           <div
             className="progress-fill"
@@ -170,4 +182,4 @@ const ReviewQuestionPage = () => {
   );
 };
 
-export default ReviewQuestionPage ;
+export default ReviewQuestionPage;
