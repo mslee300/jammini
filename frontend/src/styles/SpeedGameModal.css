@@ -1,0 +1,167 @@
+.modal-timer-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Dim background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  width: 80vw; /* Set the width to 80% of the viewport width */
+  max-width: 336px; /* Maximum width should not exceed 420px */
+  min-width: 300px; /* Minimum width is 80% of 420px */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.modal-title-container {
+  display: flex;
+  align-items: center; /* Align the icon and text vertically */
+  justify-content: center; /* Center them horizontally */
+  gap: 10px; /* Add some space between the icon and the text */
+}
+
+.modal-fire-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.modal-title {
+  font-size: 20px;
+  margin: 0; /* Remove margin to ensure it aligns properly */
+}
+
+.modal-description {
+  font-size: 15px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.modal-question-box {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.modal-button {
+  background-color: #e93e47;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  width: calc(100% - 5px);
+  margin: 0 auto;
+  height: 50px;
+}
+
+.modal-button:hover {
+  background-color: #d85c64;
+}
+
+/* Loading spinner styles */
+.loading-spinner {
+  font-size: 18px;
+  color: #e93e47;
+  margin-bottom: 20px;
+}
+
+/* Generated link box */
+.generated-link-box {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 0; /* Remove padding to fit the elements better */
+  overflow: hidden; /* To ensure button doesn't overflow */
+  height: 50px;
+}
+
+.generated-link-input {
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #666;
+  padding: 10px; /* Padding inside the input */
+  outline: none;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.copy-button {
+  background-color: #e93e47;
+  color: white;
+  border: none;
+  border-left: 1px solid #ccc; /* Optional: Add a slight border to separate button */
+  padding: 0;
+  width: 80px; /* Set a fixed width for the button */
+  height: 100%; /* Take the full height of the container */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  font-weight: 700px;
+  font-size: 16px;
+}
+
+.copy-button:hover {
+  background-color: #d85c64;
+}
+
+/* Toast Notification Styles */
+.toast-notification {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  z-index: 2000; /* Ensure it's above other elements */
+  animation: fadeInOut 3s forwards;
+}
+
+.checkmark-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Fade in and out animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(30px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(30px);
+  }
+}
