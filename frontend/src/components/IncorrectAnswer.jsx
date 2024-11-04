@@ -3,9 +3,13 @@ import "../styles/CorrectIncorrect.css";
 import CrossIcon from "../assets/img/cross-circle.svg";
 import FlagIcon from "../assets/img/flag2.svg";
 
-const InCorrectAnswer = ({ correctAnswer }) => {
+const InCorrectAnswer = ({ correctAnswer, pageType }) => {
   return (
-    <div className="incorrect-answer-box">
+    <div
+      className={`incorrect-answer-box ${
+        pageType === "review" ? "review" : ""
+      }`}
+    >
       <div className="incorrect-left">
         <div className="icon-and-text">
           <img src={CrossIcon} alt="Cross" className="icon-left" />

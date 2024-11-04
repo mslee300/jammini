@@ -17,6 +17,10 @@
   z-index: 1;
 }
 
+.correct-answer-box.review {
+  height: 250px;
+}
+
 .answer-text {
   color: #000;
   font-size: 32px;
@@ -85,7 +89,7 @@
   height: 200px;
   background-color: #fbe4e9;
   border-radius: 22px 22px 0px 0px;
-  color: #E93E47;
+  color: #e93e47;
   font-size: 14px;
   font-weight: 700;
   width: 100%;
@@ -96,8 +100,12 @@
   z-index: 1;
 }
 
+.incorrect-answer-box.review {
+  height: 280px;
+}
+
 .incorrect-answer-text {
-  color: #E93E47; /* Red color for incorrect answer text */
+  color: #e93e47; /* Red color for incorrect answer text */
   font-weight: 700;
 }
 
