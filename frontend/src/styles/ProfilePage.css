@@ -1,0 +1,200 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.profilepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 420px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-bottom: 140px;
+}
+
+.profile-background {
+  width: 100%;
+  height: 240px;
+  background-color: #fbe4e9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+.profile-image {
+  position: absolute;
+  bottom: 0; /* Half of the image height to position it at the bottom */
+}
+
+.username {
+  font-size: 32px;
+  font-weight: 500;
+  padding-top: 15px;
+}
+
+.user-handle,
+.join-date {
+  font-size: 16px;
+  color: #888;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+/* Profile Stats */
+.profile-stats {
+  max-width: 400px;
+  background-color: #ffffff;
+  width: calc(100% - 50px);
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 16px auto;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.stat-value {
+  font-size: 14px;
+  color: #888;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+/* Add Friend Button */
+.add-friend-button {
+  padding: 10px 20px;
+  border: 1.5px solid #e93e47;
+  border-radius: 24px;
+  color: #E93E47;
+  background-color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* User Metrics */
+.user-metrics {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metric-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.metric-value {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.metric-label {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Recent Games Section */
+.recent-games {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.recent-games-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.game-icons {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #e5e5e5; /* Add border around the games section */
+  border-radius: 12px;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.game-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  border-right: 1px solid #e5e5e5; /* Divider between game items */
+}
+
+.game-item:last-child {
+  border-right: none; /* Remove right border from last item */
+}
+
+.game-icon {
+  margin-top: 8px;
+}
+
+.game-label {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 430px) {
+  .profilepage-container {
+    padding: 12px;
+  }
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .metric-icon,
+  .game-icon {
+    width: 30px;
+    height: 30px;
+  }
+}

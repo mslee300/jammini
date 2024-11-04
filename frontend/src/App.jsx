@@ -13,6 +13,7 @@ import ReviewQuestionPage from "./pages/ReviewQuestionPage";
 import Grading from "./pages/Grading";
 import WinnerPage from "./pages/WinnerPage";
 import LoserPage from "./pages/LoserPage";
+import ProfilePage from "./pages/ProfilePage";
 import "./styles/App.css";
 
 function Logout() {
@@ -51,6 +52,7 @@ function App() {
         <Route path="/grading" element={<Grading />} />
         <Route path="/winnerpage" element={<WinnerPage />} />
         <Route path="/loserpage" element={<LoserPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>

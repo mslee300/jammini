@@ -35,7 +35,7 @@ const Navbar = () => {
         </svg>
         <span>리뷰</span>
       </NavLink>
-      <NavLink to="/settings" activeClassName="active">
+      <NavLink to="/profile" activeClassName="active">
         <svg
           className="nav-icon"
           width="27"
