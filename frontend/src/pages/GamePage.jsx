@@ -267,10 +267,19 @@ const GamePage = () => {
     setIsSubmitted(false); // Resets submission state so user can try again
   };
 
+  const handleExit = () => {
+    navigate("/");
+  };
+
   return (
     <div className="game-container">
       <div className="game-header">
-        <img src={ExitIcon} alt="Exit" className="header-icon exit-icon" />
+        <img
+          src={ExitIcon}
+          alt="Exit"
+          className="header-icon exit-icon"
+          onClick={handleExit}
+        />
         <div className="progress-bar">
           <div
             className="progress-fill"
@@ -362,7 +371,7 @@ const GamePage = () => {
             : handleSubmit // Submit if checking answer
         }
         disabled={!selectedOption && !isSubmitted} //
-        >
+      >
         {isCorrect === null
           ? "정답 확인!" // Initial check answer state
           : isCorrect === false
@@ -371,9 +380,12 @@ const GamePage = () => {
       </button>
 
       {/* Feedback Components */}
-      {isCorrect === true && <CorrectAnswer />}
+      {isCorrect === true && <CorrectAnswer pageType="game" />}
       {isCorrect === false && (
-        <IncorrectAnswer correctAnswer={currentQuestion.correct_answer} />
+        <IncorrectAnswer
+          correctAnswer={currentQuestion.correct_answer}
+          pageType="game"
+        />
       )}
     </div>
   );

@@ -12,6 +12,20 @@
   box-sizing: border-box;
 }
 
+.review-game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 16px;
+  padding-bottom: 270px;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+}
+
 /* Header */
 .game-header {
   display: flex;
@@ -20,6 +34,7 @@
   width: 100%;
   box-sizing: border-box;
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .header-icon {
@@ -56,7 +71,17 @@
   box-sizing: border-box;
   text-align: center;
   margin-bottom: 10px;
-  margin-top: 30px;
+}
+
+.review-question-section {
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .bookmark-icon {
@@ -74,7 +99,8 @@
 }
 
 /* Question and translation styling */
-.question-section h1 {
+.question-section h1,
+.review-question-section h1 {
   font-family: "Pretendard Variable", sans-serif;
   font-size: 32px;
   margin-bottom: 40px;
@@ -84,7 +110,8 @@
   color: #000000;
 }
 
-.question-section p {
+.question-section p,
+.review-question-section p {
   font-family: "Pretendard Variable", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -160,45 +187,44 @@
 
 /* Option button styles when selected but not yet submitted */
 .option.selected {
-  background-color: #FBE4E9; /* Light green for selection */
-  color: #E93E47; /* Green text for selection */
+  background-color: #fbe4e9; /* Light green for selection */
+  color: #e93e47; /* Green text for selection */
   font-weight: 700;
 }
 
 /* Option button styles when correct */
 .option.correct-option {
-  background-color: #DFF6EF; /* Green for correct */
-  color: #29C195; /* White text for correct */
+  background-color: #dff6ef; /* Green for correct */
+  color: #29c195; /* White text for correct */
   font-weight: 700;
 }
 
 /* Option button styles when incorrect */
 .option.incorrect-option {
-  background-color: #FBE4E9; /* Light green for selection */
-  color: #E93E47; /* Green text for selection */
+  background-color: #fbe4e9; /* Light green for selection */
+  color: #e93e47; /* Green text for selection */
   font-weight: 700;
 }
 
 .incorrect-answer {
-  color: #E93E47; /* Red color for incorrect answer */
+  color: #e93e47; /* Red color for incorrect answer */
   font-weight: bold;
 }
 
 /* Initial styling for submit button when no answer is selected */
 .submit-btn.initial {
-  background-color: #E5E5E5;
-  color: #AFAFAF;
+  background-color: #e5e5e5;
+  color: #afafaf;
   cursor: not-allowed; /* Prevents the pointer cursor */
 }
 
 /* Remove hover effect for initial state */
 .submit-btn.initial:hover {
-  background-color: #E5E5E5; /* Keep the background color unchanged */
+  background-color: #e5e5e5; /* Keep the background color unchanged */
 }
 
-
 .submit-btn {
-  background-color: #E93E47;
+  background-color: #e93e47;
   color: white;
   padding: 12px;
   width: 100%;
@@ -216,19 +242,56 @@
 }
 
 .submit-btn:hover {
-  background-color: #E93E47;
+  background-color: #e93e47;
 }
 
 .submit-btn.correct {
-  background-color: #29C195;
+  background-color: #29c195;
   color: white;
 }
 
 .submit-btn.incorrect {
-  background-color: #E93E47;
+  background-color: #e93e47;
 }
 
 .feedback {
   font-size: 18px;
   text-align: center;
+}
+
+.exit-btn {
+  background-color: transparent;
+  padding: 12px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 56px;
+  font-family: "Pretendard Variable", sans-serif;
+  font-weight: 700;
+  z-index: 2;
+  margin-bottom: 20px;
+}
+
+.exit-btn.correct {
+  border: 2px solid rgba(41, 193, 149, 0.4);
+  color: #29c195;
+}
+
+.exit-btn.incorrect {
+  border: 2px solid rgba(233, 62, 71, 0.4);
+  color: #e93e47;
+}
+
+.review-buttons {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  max-width: 430px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  z-index: 1000;
 }

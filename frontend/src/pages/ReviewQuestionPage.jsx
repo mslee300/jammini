@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 import CorrectAnswer from "../components/CorrectAnswer";
 import IncorrectAnswer from "../components/IncorrectAnswer";
 import ExitIcon from "../assets/img/exit.svg";
-import SettingsIcon from "../assets/img/settings.svg";
-import BookmarkIcon from "../assets/img/bookmark.svg";
 import "../styles/GamePage.css";
 
 const ReviewQuestionPage = () => {
@@ -13,10 +11,23 @@ const ReviewQuestionPage = () => {
   const questions = [
     {
       id: 1,
-      text: "The CEO has already ___ the company’s new strategy before the meeting last week.",
-      options: ["revise", "revised", "revises", "revising"],
-      correct_answer: "revised",
+      text: "The event was ___ because of the bad weather.",
+      translation: "날씨가 안 좋아서 행사가 취소됐어요.",
+      options: ["canceled", "rescheduled", "delayed", "postponed"],
+      correct_answer: "canceled",
     },
+    // {
+    //   id: 2,
+    //   text: "The CEO has already ___ the company’s new strategy before the meeting last week.",
+    //   options: ["revise", "revised", "revises", "revising"],
+    //   correct_answer: "revised",
+    // },
+    // {
+    //   id: 3,
+    //   text: "What does the word 'severely' mean?",
+    //   options: ["softly", "moderately", "harshly", "quickly"],
+    //   correct_answer: "harshly",
+    // },
   ];
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -65,7 +76,7 @@ const ReviewQuestionPage = () => {
   };
 
   return (
-    <div className="game-container">
+    <div className="review-game-container">
       <div className="game-header">
         <img
           src={ExitIcon}
@@ -73,25 +84,11 @@ const ReviewQuestionPage = () => {
           className="header-icon exit-icon"
           onClick={handleExit}
         />
-        <div className="progress-bar">
-          <div
-            className="progress-fill"
-            style={{
-              width: `${
-                ((currentQuestionIndex + 1) / questions.length) * 100
-              }%`,
-            }}
-          ></div>
-        </div>
-        <img
-          src={SettingsIcon}
-          alt="Settings"
-          className="header-icon settings-icon"
-        />
       </div>
 
-      <div className={`question-section ${isSubmitted ? "submitted" : ""}`}>
-        <img src={BookmarkIcon} alt="Bookmark" className="bookmark-icon" />
+      <div
+        className={`review-question-section ${isSubmitted ? "submitted" : ""}`}
+      >
         <h1>
           {currentQuestion.text.split("___").map((part, index) => (
             <React.Fragment key={index}>
@@ -152,31 +149,45 @@ const ReviewQuestionPage = () => {
           </button>
         ))}
       </div>
-
-      <button
-        className={`submit-btn ${selectedOption ? "" : "initial"} ${
-          isCorrect === false ? "incorrect" : ""
-        } ${isCorrect === true ? "correct" : ""}`}
-        onClick={
-          isCorrect === true
-            ? handleNextQuestion // Move to the next question if correct
+      <div className="review-buttons">
+        <button
+          className={`submit-btn ${selectedOption ? "" : "initial"} ${
+            isCorrect === false ? "incorrect" : ""
+          } ${isCorrect === true ? "correct" : ""}`}
+          onClick={
+            isCorrect === true
+              ? handleNextQuestion // Move to the next question if correct
+              : isCorrect === false
+              ? handleRetry // Reset for retry if incorrect
+              : handleSubmit // Submit if checking answer
+          }
+          disabled={!selectedOption && !isSubmitted} // Disable if no selection or already submitted
+        >
+          {isCorrect === null
+            ? "정답 확인!" // Initial check answer state
             : isCorrect === false
-            ? handleRetry // Reset for retry if incorrect
-            : handleSubmit // Submit if checking answer
-        }
-        disabled={!selectedOption && !isSubmitted} // Disable if no selection or already submitted
-      >
-        {isCorrect === null
-          ? "정답 확인!" // Initial check answer state
-          : isCorrect === false
-          ? "확인했어요" // Retry state
-          : "계속 풀기"}
-      </button>
+            ? "다시 풀어보기" // Retry state
+            : "다시 풀기"}
+        </button>
+        {isSubmitted && (
+          <button
+            className={`exit-btn ${isCorrect === false ? "incorrect" : ""} ${
+              isCorrect === true ? "correct" : ""
+            }`}
+            onClick={handleExit}
+          >
+            나가기
+          </button>
+        )}
+      </div>
 
       {/* Feedback Components */}
-      {isCorrect === true && <CorrectAnswer />}
+      {isCorrect === true && <CorrectAnswer pageType="review" />}
       {isCorrect === false && (
-        <IncorrectAnswer correctAnswer={currentQuestion.correct_answer} />
+        <IncorrectAnswer
+          correctAnswer={currentQuestion.correct_answer}
+          pageType="review"
+        />
       )}
     </div>
   );
