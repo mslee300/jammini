@@ -111,3 +111,33 @@ a:link {
   height: 33px;
   margin-left: 20px;
 }
+
+
+
+
+
+.filterButton {
+  border: none;
+  padding: 9px 16px;
+  border-radius: 31px;
+  font-size: 16px;
+  cursor: pointer;
+  min-width: fit-content;
+  min-height: fit-content;
+  background-color: #e6e6e6; /* Default gray background */
+  color: #979797; /* Default gray text */
+  font-weight: 500;
+}
+
+.filterButton img {
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
+}
+
+/* Selected button style */
+.filterButton.selected {
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text */
+  font-weight: 600;
+}

@@ -9,19 +9,19 @@ const ReviewQuestionPage = () => {
   const navigate = useNavigate();
 
   const questions = [
-    {
-      id: 1,
-      text: "The event was ___ because of the bad weather.",
-      translation: "날씨가 안 좋아서 행사가 취소됐어요.",
-      options: ["canceled", "rescheduled", "delayed", "postponed"],
-      correct_answer: "canceled",
-    },
     // {
-    //   id: 2,
-    //   text: "The CEO has already ___ the company’s new strategy before the meeting last week.",
-    //   options: ["revise", "revised", "revises", "revising"],
-    //   correct_answer: "revised",
+    //   id: 1,
+    //   text: "The event was ___ because of the bad weather.",
+    //   translation: "날씨가 안 좋아서 행사가 취소됐어요.",
+    //   options: ["canceled", "rescheduled", "delayed", "postponed"],
+    //   correct_answer: "canceled",
     // },
+    {
+      id: 2,
+      text: "The CEO has already ___ the company’s new strategy before the meeting last week.",
+      options: ["revise", "revised", "revises", "revising"],
+      correct_answer: "revised",
+    },
     // {
     //   id: 3,
     //   text: "What does the word 'severely' mean?",
