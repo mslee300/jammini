@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom"; // Import useNavigate for redirection
 import "../styles/Waiting.css";
-import FireIcon from "../assets/img/speedgame-fire.svg";
+// import FireIcon from "../assets/img/speedgame-fire.svg";
+import TimerIcon from "../assets/img/countdown-watch.svg";
 import api from "../api"; // Axios instance
 
 const Waiting = ({ onExit }) => {
@@ -63,7 +64,8 @@ const Waiting = ({ onExit }) => {
   return (
     <div className="waiting-container">
       {!canStart && countdown === null && (
-        <img src={FireIcon} alt="Fire icon" className="waiting-fire-icon" />
+        // <img src={FireIcon} alt="Fire icon" className="waiting-fire-icon" />
+        <img src={TimerIcon} alt="Timer icon" className="waiting-fire-icon" />
       )}
 
       {canStart ? (

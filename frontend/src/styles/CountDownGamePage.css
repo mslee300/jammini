@@ -1,17 +1,3 @@
-.timer {
-  display: flex;
-  align-items: center; /* Vertically aligns icon and text */
-  font-weight: bold;
-  color: #E3496C; /* Set color to #E3496C */
-  font-size: 1rem; /* Adjust font size as needed */
-}
-
-.clock-icon {
-  margin-right: 8px; /* Adds margin between icon and text */
-  display: inline-block;
-  vertical-align: middle;
-}
-
 /* Main container */
 .game-container {
   display: flex;
@@ -64,7 +50,7 @@
   background-color: #e6e6e6;
   border-radius: 6px;
   position: relative;
-  margin: 0 20px 0 30px;
+  margin: 0 30px;
   overflow: hidden;
 }
 

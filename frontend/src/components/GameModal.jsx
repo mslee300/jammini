@@ -27,20 +27,6 @@ const GameModal = ({ isOpen, onClose, fireIcon, questionImage }) => {
       });
   };
 
-  // const copyToClipboard = () => {
-  //   navigator.clipboard.writeText(generatedLink);
-
-  //   setIsToastVisible(true);
-
-  //   // After the 3-second delay, navigate to the generated URL
-  //   setTimeout(() => {
-  //     setIsToastVisible(false); // Hide the toast notification
-  //     window.location.href = generatedLink; // Redirect to the generated link
-  //   }, 2500); // 3-second delay
-  // };
-
-  // if (!isOpen) return null;
-
   const copyToClipboard = () => {
     // Create a modified version of the link strictly for copying
     const modifiedLinkForClipboard = generatedLink.replace(/\/game\/speedgame\/\d+\//, '/game/speedgame/1/');
