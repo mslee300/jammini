@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/LoginOption.css";
 
 const LoginOption = () => {
+  const navigate = useNavigate();
+
+  const handleSignUpClick = () => {
+    navigate("/chooseexam"); // Navigate to the ChooseExam page
+  };
+
   return (
     <div className="login-option">
       <div className="header">
@@ -15,7 +22,9 @@ const LoginOption = () => {
         </h2>
       </div>
       <div className="button-container">
-        <button className="signup-button">회원가입</button>
+        <button className="signup-button" onClick={handleSignUpClick}>
+          회원가입
+        </button>
         <button className="login-button">로그인</button>
       </div>
     </div>

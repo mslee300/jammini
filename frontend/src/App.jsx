@@ -14,6 +14,10 @@ import Grading from "./pages/Grading";
 import WinnerPage from "./pages/WinnerPage";
 import LoserPage from "./pages/LoserPage";
 import ProfilePage from "./pages/ProfilePage";
+import ChooseExamPage from "./pages/ChooseExam";
+import LoginOptionPage from "./pages/LoginOption";
+import SocialLoginPage from "./pages/SocialLogin";
+
 import "./styles/App.css";
 
 function Logout() {
@@ -54,6 +58,9 @@ function App() {
         <Route path="/loserpage" element={<LoserPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="*" element={<NotFound />}></Route>
+        <Route path="/chooseexam" element={<ChooseExamPage />} />
+        <Route path="/loginoption" element={<LoginOptionPage />} />
+        <Route path="/sociallogin" element={<SocialLoginPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,71 @@
+.exams-container {
+  max-width: 420px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Slim Progress Bar */
+.progress-bar {
+  width: 90%; /* Full width of container */
+  height: 12px; /* Reduced height for a slimmer bar */
+  background-color: #e6e6e6;
+  border-radius: 6px;
+  margin: 0 0 60px 0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 25%; /* Static width for the progress */
+  height: 100%;
+  background-color: #e93e47;
+  border-radius: 6px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 35px;
+  margin-top: 0;
+}
+
+.exams-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  width: 100%;
+}
+
+.exam-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.exam-image {
+  width: 100%;
+  max-width: 170px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.exam-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0;
+}
+
+.exam-description {
+  font-size: 14px;
+  color: #87878C;
+}

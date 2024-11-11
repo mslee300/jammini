@@ -1,0 +1,110 @@
+.login-option-container {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 420px;
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 20px;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 140px;
+    position: relative; */
+    max-width: 420px;
+    min-height: 100vh;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Back Arrow */
+.back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 90%; /* Full width of container */
+    height: 12px; /* Reduced height for a slimmer bar */
+    max-height: 12px;
+    background-color: #e6e6e6;
+    border-radius: 6px;
+    margin: 0 0 60px 0;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    width: 50%; /* Static width for the progress */
+    height: 100%;
+    background-color: #e93e47;
+    border-radius: 6px;
+  }
+
+
+/* Heading and Sub-heading */
+.heading {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0 2px;
+    color: #333;
+}
+
+.sub-heading {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.kakao-button, .google-button, .idpw-button {
+    width: 90%;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kakao-button {
+    background-color: #FFDA00;
+    color: #3C1E1E;
+    border: none;
+}
+
+.google-button, .idpw-button {
+    background-color: #FFFFFF;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+/* Icon Styling */
+.icon {
+    margin-right: 8px;
+    width: 20px; /* Adjust size to match demo */
+    height: 20px;
+}
+
+/* Media Query */
+@media (max-width: 420px) {
+    .login-option-container {
+        width: 100%;
+        padding: 12px;
+    }
+}

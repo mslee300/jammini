@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
 import "../styles/Form.css";
 import LoadingIndicator from "./LoadingIndicator";
+import LoginIntro from "../assets/img/login-intro.svg";
 
 function Form({ route, method }) {
   const [username, setUsername] = useState("");
@@ -35,7 +36,7 @@ function Form({ route, method }) {
 
   return (
     <form onSubmit={handleSubmit} className="form-container">
-      <h1>로그인하기</h1>
+      <img src={LoginIntro} alt="Login Title" className="title-image" />
       <input
         className="form-input"
         type="text"
@@ -52,8 +53,14 @@ function Form({ route, method }) {
       />
       {loading && <LoadingIndicator />}
       <button className="form-button" type="submit">
-        로그인하기
+        로그인
       </button>
+      <p className="register">
+        <a href="#">아이디·비밀번호 찾기 | </a>
+        <a href="#" style={{ color: "#E93E47", fontWeight: "bold" }}>
+          회원가입
+        </a>
+      </p>
     </form>
   );
 }
