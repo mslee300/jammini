@@ -1,0 +1,65 @@
+.login-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+  max-width: 420px;
+  min-height: 100vh;
+  height: auto;
+  margin: 0px auto;
+  border: none;
+  width: 420px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Pretendard Variable", sans-serif;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  width: 70%;
+  margin: 0;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+  margin-top: 30%;
+}
+
+.signup-button {
+  background-color: #e93e47;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 18px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button {
+  background-color: white;
+  color: #e93e47;
+  border: 1px solid #e93e47;
+  border-radius: 10px;
+  padding: 18px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
