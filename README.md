@@ -1,6 +1,6 @@
 <h1 align="center"> Jammini </h1><br>
 <p align="center">
-    <img width="200" alt="Jammini logo" src="https://github.com/user-attachments/assets/11a759b2-0b44-4e62-8746-841df3634cfd">
+    <img width="200" alt="Jammini logo" src="https://github.com/user-attachments/assets/ac8504a6-ad3f-4125-bc1b-1ccaed90f3e3">
 </p>
 
 <p align="center"> 
