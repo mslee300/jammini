@@ -14,7 +14,7 @@
 }
 
 .waiting-fire-icon {
-  width: 120px; /* Adjust the size of the fire icon */
+  width: 200px; /* Adjust the size of the fire icon */
   height: auto;
 }
 
@@ -29,12 +29,13 @@
 .waiting-subtitle {
   font-size: 16px;
   margin-bottom: 40px;
+  margin-top: 10px;
 }
 
 .exit-button {
   position: absolute;
-  background-color: #ffe6e6;
-  color: #e93e47;
+  background-color: #FFC8A4;
+  color: #FF4100;
   font-weight: bold;
   border: none;
   padding: 15px 30px;
@@ -48,13 +49,14 @@
 }
 
 .exit-button:hover {
-  background-color: #ffdcdc;
+  background-color: #ef5f00;
+  color: #fdd6ca;
 }
 
 .waiting-title.ready {
   font-size: 36px; /* Similar to the 'READY?' and countdown size in your images */
   font-weight: bold;
-  color: #e93e47; /* Adjust the red to match your design */
+  color: #FF4100; /* Adjust the red to match your design */
   margin: 0;
   padding-left: 5px; /* Move the 'READY?' text slightly to the right */
   position: relative;
@@ -68,7 +70,7 @@
 .countdown-circle {
   font-size: 4.5rem; /* Size of the countdown numbers */
   font-weight: bold;
-  color: #e93e47;
+  color: #FF4100;
   margin: 0;
   position: relative;
   display: flex;
@@ -86,7 +88,7 @@
   width: 150px;  /* Circle size */
   height: 150px; /* Circle size */
   border-radius: 50%;
-  border: 5px solid #e93e47; /* Match red color with text */
+  border: 5px solid #FF4100; /* Match red color with text */
   margin: 0 auto;
   position: absolute;
   top: 0;

@@ -18,7 +18,7 @@ p {
 .profile-background {
   width: 100%;
   height: 240px;
-  background-color: #fbe4e9;
+  background-color: #FFC8A4;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -28,6 +28,7 @@ p {
 .profile-image {
   position: absolute;
   bottom: 0; /* Half of the image height to position it at the bottom */
+  width: 260px;
 }
 
 .username {
@@ -92,9 +93,9 @@ p {
 /* Add Friend Button */
 .add-friend-button {
   padding: 10px 20px;
-  border: 1.5px solid #e93e47;
+  border: 1.5px solid #FF4100;
   border-radius: 24px;
-  color: #E93E47;
+  color: #FF4100;
   background-color: #ffffff;
   font-size: 16px;
   font-weight: 600;

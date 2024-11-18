@@ -57,7 +57,7 @@
 }
 
 .modal-button {
-  background-color: #e93e47;
+  background-color: #FF4100;
   color: white;
   border: none;
   padding: 10px 0;
@@ -70,13 +70,13 @@
 }
 
 .modal-button:hover {
-  background-color: #d85c64;
+  background-color: #fb7d53;
 }
 
 /* Loading spinner styles */
 .loading-spinner {
   font-size: 18px;
-  color: #e93e47;
+  color: #FF4100;
   margin-bottom: 20px;
 }
 
@@ -103,7 +103,7 @@
 }
 
 .copy-button {
-  background-color: #e93e47;
+  background-color: #FF4100;
   color: white;
   border: none;
   border-left: 1px solid #ccc; /* Optional: Add a slight border to separate button */
@@ -120,7 +120,7 @@
 }
 
 .copy-button:hover {
-  background-color: #d85c64;
+  background-color: #ff6c3b;
 }
 
 /* Toast Notification Styles */

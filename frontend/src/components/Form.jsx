@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
 import "../styles/Form.css";
 import LoadingIndicator from "./LoadingIndicator";
-import LoginIntro from "../assets/img/login-intro.svg";
+import LoginIntro from "../assets/img/login-intro.png";
 
 function Form({ route, method }) {
   const [username, setUsername] = useState("");
@@ -57,7 +57,7 @@ function Form({ route, method }) {
       </button>
       <p className="register">
         <a href="#">아이디·비밀번호 찾기 | </a>
-        <a href="#" style={{ color: "#E93E47", fontWeight: "bold" }}>
+        <a href="#" style={{ color: "#FF4100", fontWeight: "bold" }}>
           회원가입
         </a>
       </p>

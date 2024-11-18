@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   max-width: 420px;
   min-height: 100vh;
   height: auto;
@@ -22,9 +22,9 @@
 }
 
 .logo {
-  width: 120px;
+  width: 226px;
   height: auto;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 .title {
@@ -42,28 +42,29 @@
   flex-direction: column;
   gap: 10px;
   width: 380px;
-  /* margin-top: 100px; */
   position: fixed;
-  bottom: 10px;
+  bottom: 30px;
   margin: auto;
 }
 
 .signup-button {
-  background-color: #e93e47;
+  background-color: #FF4100;
   color: white;
   border: none;
   border-radius: 10px;
   padding: 18px 0;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
 }
 
 .login-button {
   background-color: white;
-  color: #e93e47;
-  border: 1px solid #e93e47;
+  color: #FF4100;
+  border: 1px solid #FF4100;
   border-radius: 10px;
   padding: 18px 0;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
 }

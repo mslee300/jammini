@@ -57,8 +57,8 @@ h1 span {
 }
 
 .game-card img {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   position: absolute;
   bottom: 8px; /* Align image to the bottom */
   right: 8px; /* Align image to the right */

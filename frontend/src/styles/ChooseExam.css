@@ -15,14 +15,14 @@
   height: 12px; /* Reduced height for a slimmer bar */
   background-color: #e6e6e6;
   border-radius: 6px;
-  margin: 0 0 60px 0;
+  margin: 0 0 40px 0 !important;
   overflow: hidden;
 }
 
-.progress-fill {
+.progress-fill-chooseexam {
   width: 25%; /* Static width for the progress */
   height: 100%;
-  background-color: #e93e47;
+  background-color: #FF4100 !important;
   border-radius: 6px;
 }
 

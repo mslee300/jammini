@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/LoginOption.css";
+import CharacterLogo from "../assets/img/character-logo.png";
 
 const LoginOption = () => {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const LoginOption = () => {
     <div className="login-option">
       <div className="header">
         <img
-          src="https://github.com/user-attachments/assets/11a759b2-0b44-4e62-8746-841df3634cfd"
+          src={CharacterLogo}
           alt="Jammini logo"
           className="logo"
         />

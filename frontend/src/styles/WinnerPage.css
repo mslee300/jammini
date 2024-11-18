@@ -21,7 +21,7 @@
   font-family: "Pretendard Variable", sans-serif;
   font-size: 32px;
   font-weight: 600;
-  color: #e93e47; /* Black color */
+  color: #FF4100; /* Black color */
   padding: 0;
 }
 
@@ -41,7 +41,7 @@
 
 .replay-button {
   position: absolute;
-  background-color: #e93e47;
+  background-color: #FF4100 !important;
   color: #ffffff;
   font-weight: bold;
   border: none;

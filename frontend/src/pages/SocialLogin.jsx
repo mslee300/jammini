@@ -15,14 +15,14 @@ const SocialLogin = () => {
   return (
     <div className="login-option-container">
       {/* Back Arrow */}
-      <div className="back-arrow">←</div>
+      {/* <div className="back-arrow">←</div> */}
       {/* Progress Bar */}
       <div className="progress-bar">
         <div className="progress-fill"></div>
       </div>
       
       <h2 className="heading">SNS로 가입하여</h2>
-      <p className="sub-heading">빠르게 시작하세요!</p>
+      <h2 className="sub-heading">빠르게 시작하세요!</h2>
 
       {/* Kakao Login Button */}
       <button className="kakao-button" onClick={handleNavigateToLogin}>

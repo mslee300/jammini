@@ -23,7 +23,7 @@ function ChooseExam() {
   return (
     <div className="exams-container">
       <div className="progress-bar">
-        <div className="progress-fill"></div>
+        <div className="progress-fill-chooseexam"></div>
       </div>
       <h1 className="title">제가 배우고 싶은건...</h1>
       <div className="exams-grid">

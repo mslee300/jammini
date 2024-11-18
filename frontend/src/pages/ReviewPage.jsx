@@ -121,7 +121,7 @@ const ReviewPage = () => {
   return (
     <div className="container">
       <Navbar />
-      <h2 className="title">문제 리뷰</h2>
+      <h2 className="title-review">문제 리뷰</h2>
       <div className="filters">
         <button
           className={`filterButton ${filter === "recent" ? "selected" : ""}`}

@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "../styles/ProfilePage.css";
-import ProfileImage from "../assets/img/default-profile-image.svg";
+import ProfileImage from "../assets/img/default-profile-jammini.png";
 import StreakFire from "../assets/img/streak-fire.svg";
 import SolvedProblem from "../assets/img/solved-problem.svg";
 import PracticedTime from "../assets/img/practiced-time.svg";

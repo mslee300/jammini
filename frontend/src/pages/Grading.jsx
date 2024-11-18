@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Grading.css";
-import gradingImage from "../assets/img/grading.svg";
+import gradingImage from "../assets/img/grading-jammini.png";
 
 function Grading() {
   return (

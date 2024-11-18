@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom"; // Import useNavigate for redirection
 import "../styles/Waiting.css";
 // import FireIcon from "../assets/img/speedgame-fire.svg";
-import TimerIcon from "../assets/img/countdown-watch.svg";
+import TimerIcon from "../assets/img/waiting-jammini.png";
 import api from "../api"; // Axios instance
 
 const Waiting = ({ onExit }) => {

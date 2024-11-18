@@ -2,7 +2,7 @@
   display: flex;
   align-items: center; /* Vertically aligns icon and text */
   font-weight: bold;
-  color: #E3496C; /* Set color to #E3496C */
+  color: #FF4100; /* Set color to #E3496C */
   font-size: 1rem; /* Adjust font size as needed */
 }
 
@@ -58,7 +58,7 @@
 }
 
 /* Progress Bar */
-.progress-bar {
+.progress-bar-gamepage {
   flex-grow: 1;
   height: 12px;
   background-color: #e6e6e6;
@@ -68,10 +68,10 @@
   overflow: hidden;
 }
 
-.progress-fill {
+.progress-fill-gamepage {
   width: 25%;
   height: 100%;
-  background-color: #e93e47;
+  background-color: #FF4100;
   border-radius: 6px;
   transition: width 0.5s ease;
 }
@@ -168,7 +168,7 @@
 
 /* Korean translation styling */
 .translation-answer {
-  color: #e93e47;
+  color: #FF4100;
 }
 
 .correct-translation {
@@ -201,8 +201,8 @@
 
 /* Option button styles when selected but not yet submitted */
 .option.selected {
-  background-color: #fbe4e9; /* Light green for selection */
-  color: #e93e47; /* Green text for selection */
+  background-color: #FFC8A4; /* Light green for selection */
+  color: #FF4100; /* Green text for selection */
   font-weight: 700;
 }
 
@@ -238,7 +238,7 @@
 }
 
 .submit-btn {
-  background-color: #e93e47;
+  background-color: #FF4100;
   color: white;
   padding: 12px;
   width: 100%;
@@ -256,7 +256,7 @@
 }
 
 .submit-btn:hover {
-  background-color: #e93e47;
+  background-color: #fc7041;
 }
 
 .submit-btn.correct {

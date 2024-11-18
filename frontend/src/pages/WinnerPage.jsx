@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Confetti from "react-confetti";
 import "../styles/WinnerPage.css";
-import gradingImage from "../assets/img/winner.svg";
+import gradingImage from "../assets/img/winner-jammini.png";
 
 function WinnerPage() {
   const navigate = useNavigate();
