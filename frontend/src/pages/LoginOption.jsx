@@ -10,14 +10,14 @@ const LoginOption = () => {
     navigate("/chooseexam"); // Navigate to the ChooseExam page
   };
 
+  const handleLoginClick = () => {
+    navigate("/login");
+  };
+
   return (
     <div className="login-option">
       <div className="header">
-        <img
-          src={CharacterLogo}
-          alt="Jammini logo"
-          className="logo"
-        />
+        <img src={CharacterLogo} alt="Jammini logo" className="logo" />
         <h2 className="title">
           게임으로 쉽게 준비하는 토익, 토플, 텝스, 오픽!
         </h2>
@@ -26,7 +26,9 @@ const LoginOption = () => {
         <button className="signup-button" onClick={handleSignUpClick}>
           회원가입
         </button>
-        <button className="login-button">로그인</button>
+        <button className="login-button" onClick={handleLoginClick}>
+          로그인
+        </button>
       </div>
     </div>
   );
