@@ -44,12 +44,12 @@
   gap: 10px;
   width: 380px;
   position: fixed;
-  bottom: 30px;
+  bottom: 40px;
   margin: auto;
 }
 
 .signup-button {
-  background-color: #FF4100;
+  background-color: #ff4100;
   color: white;
   border: none;
   border-radius: 10px;
@@ -61,8 +61,8 @@
 
 .login-button {
   background-color: white;
-  color: #FF4100;
-  border: 1px solid #FF4100;
+  color: #ff4100;
+  border: 1px solid #ff4100;
   border-radius: 10px;
   padding: 18px 0;
   font-size: 16px;
