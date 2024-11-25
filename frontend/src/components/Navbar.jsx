@@ -5,7 +5,7 @@ import "../styles/Navbar.css";
 const Navbar = () => {
   return (
     <div className="bottom-nav">
-      <NavLink exact to="/" activeClassName="active">
+      <NavLink exact to="/dashboard" activeClassName="active">
         <svg
           className="nav-icon"
           width="58"

@@ -1,31 +1,28 @@
 .login-option {
+  max-width: 420px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #ffffff;
-  max-width: 420px;
   min-height: 100vh;
-  height: auto;
+  width: 100%;
+  background-color: #ffffff;
   margin: 0px auto;
-  border: none;
-  width: 420px;
+  padding: 0;
 }
-
 .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Pretendard Variable", sans-serif;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .logo {
-  width: 226px;
+  width: 40%;
+  max-width: 226px;
   height: auto;
-  /* margin-bottom: 30px; */
 }
 
 .title {
@@ -42,30 +39,31 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 380px;
+  max-width: 400px;
+  width: 100%;
   position: fixed;
   bottom: 40px;
-  margin: auto;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
-.signup-button {
+.signup-button,
+.login-button {
   background-color: #ff4100;
   color: white;
   border: none;
   border-radius: 10px;
-  padding: 18px 0;
-  font-size: 16px;
+  padding: 15px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+  width: calc(100% - 30px);
+  max-width: 380px;
+  margin: 0 auto;
 }
 
 .login-button {
   background-color: white;
   color: #ff4100;
   border: 1px solid #ff4100;
-  border-radius: 10px;
-  padding: 18px 0;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
 }

@@ -43,6 +43,7 @@ function App() {
           }
         /> */}
         <Route path="/" element={<LoginOptionPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<RegisterAndLogout />} />

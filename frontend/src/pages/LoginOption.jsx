@@ -24,7 +24,7 @@ const LoginOption = () => {
       </div>
       <div className="button-container">
         <button className="signup-button" onClick={handleSignUpClick}>
-          회원가입
+          시작하기
         </button>
         <button className="login-button" onClick={handleLoginClick}>
           로그인

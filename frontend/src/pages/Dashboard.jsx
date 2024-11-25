@@ -25,7 +25,8 @@ function Dashboard() {
   return (
     <div className="dashboard-container">
       <h1>
-        Friend mode<span>Random mode</span>
+        {/* Friend mode<span>Random mode</span> */}
+        1:1 게임으로 즐기는 토익공부
       </h1>
 
       <div className="game-grid">

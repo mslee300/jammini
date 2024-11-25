@@ -26,7 +26,7 @@ function WinnerPage() {
   }, []);
 
   const handleExit = () => {
-    navigate("/");
+    navigate("/dashboard");
   };
 
   return (
