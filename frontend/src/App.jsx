@@ -34,18 +34,18 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
+        {/* <Route
           path="/"
           element={
             <ProtectedRoute>
               <Dashboard />
             </ProtectedRoute>
           }
-        />
+        /> */}
+        <Route path="/" element={<LoginOptionPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<RegisterAndLogout />} />
-        {/* <Route path="/game/speedgame/:userId/session:sessionId" element={<Waiting />} /> */}
         <Route
           path="/game/speedgame/:userId/session/:sessionId"
           element={<Waiting />}

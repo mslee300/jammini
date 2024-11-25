@@ -7,7 +7,7 @@ const LoginOption = () => {
   const navigate = useNavigate();
 
   const handleSignUpClick = () => {
-    navigate("/chooseexam"); // Navigate to the ChooseExam page
+    navigate("/register"); // Navigate to the ChooseExam page
   };
 
   const handleLoginClick = () => {
@@ -19,7 +19,7 @@ const LoginOption = () => {
       <div className="header">
         <img src={CharacterLogo} alt="Jammini logo" className="logo" />
         <h2 className="title">
-          게임으로 쉽게 준비하는 토익, 토플, 텝스, 오픽!
+          게임으로 쉽게 준비하는 토익, 점수높이기.
         </h2>
       </div>
       <div className="button-container">
