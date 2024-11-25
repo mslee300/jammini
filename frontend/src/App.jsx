@@ -17,6 +17,7 @@ import ProfilePage from "./pages/ProfilePage";
 import ChooseExamPage from "./pages/ChooseExam";
 import LoginOptionPage from "./pages/LoginOption";
 import SocialLoginPage from "./pages/SocialLogin";
+import DownloadAppModal from "./components/DownloadAppModal";
 
 import "./styles/App.css";
 
@@ -33,6 +34,7 @@ function RegisterAndLogout() {
 function App() {
   return (
     <BrowserRouter>
+      <DownloadAppModal />
       <Routes>
         {/* <Route
           path="/"

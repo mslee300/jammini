@@ -1,0 +1,80 @@
+/* Modal Overlay */
+.download-app-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align the modal at the bottom */
+  z-index: 1000;
+}
+
+/* Modal Container */
+.download-app-modal {
+  width: 100%;
+  max-width: 380px;
+  background: white;
+  border-radius: 20px 20px 0 0; /* Rounded corners only at the top */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mascot Image */
+.mascot-image {
+  width: 140px;
+  margin: 30px auto 10px;
+  display: block;
+}
+
+/* Modal Title */
+.modal-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Modal Subtitle */
+.modal-subtitle {
+  font-size: 0.9rem;
+  color: #969696;
+  margin-bottom: 25px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  background-color: #ff4100;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e63900;
+}
+
+/* Dismiss Button */
+.dismiss-button {
+  background: none;
+  color: #B8B8B8;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 25px;
+}
+
