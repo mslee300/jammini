@@ -57,7 +57,7 @@ function Form({ route, method }) {
       </button>
       <p className="register">
         <a href="#">아이디·비밀번호 찾기 | </a>
-        <a href="#" style={{ color: "#FF4100", fontWeight: "bold" }}>
+        <a href="/register" style={{ color: "#FF4100", fontWeight: "bold" }}>
           회원가입
         </a>
       </p>
