@@ -92,7 +92,7 @@ function Dashboard() {
 
         <NavLink to="/" className="game-card coming-soon">
           <p>동/반의어 대결</p>
-          <img src={MicrophoneIcon} alt="Link icon" />
+          <img src={TimerIcon} alt="Link icon" />
           <div className="coming-soon-overlay">
             COMING
             <br />
