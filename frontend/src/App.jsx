@@ -18,6 +18,8 @@ import ChooseExamPage from "./pages/ChooseExam";
 import LoginOptionPage from "./pages/LoginOption";
 import SocialLoginPage from "./pages/SocialLogin";
 import DownloadAppModal from "./components/DownloadAppModal";
+import Assessment from "./pages/Assessment";
+import AssessmentResult from "./pages/AssessmentResult";
 
 import "./styles/App.css";
 
@@ -64,6 +66,8 @@ function App() {
         <Route path="/chooseexam" element={<ChooseExamPage />} />
         <Route path="/loginoption" element={<LoginOptionPage />} />
         <Route path="/sociallogin" element={<SocialLoginPage />} />
+        <Route path="/assessment" element={<Assessment />} />
+        <Route path="/assessmentresult" element={<AssessmentResult />} />
       </Routes>
     </BrowserRouter>
   );

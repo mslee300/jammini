@@ -66,7 +66,7 @@ const GamePage = () => {
 
       // Step 3: Set a timeout to navigate to /winnerpage after a few seconds
       setTimeout(() => {
-        navigate("/winnerpage");
+        navigate("/assessmentresult");
       }, 2500); // 3000 ms = 3 seconds
     }
   };
