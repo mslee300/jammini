@@ -1,57 +1,108 @@
 .register-form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 420px;
-    min-height: 100vh;
-    height: auto;
-    margin: 0 auto;
-    padding: 0;
-  }
-  
-  .register-form-input {
-    width: 320px;
-    padding: 0.6rem 0.75rem;
-    margin: 3px 0;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  
-  .register-form-button {
-    width: 320px;
-    padding: 10px;
-    margin: 4px 0;
-    background-color: #FF4100;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .register-form-button:disabled {
-    background-color: #b0b0b0;
-  }
-  
-  .register-form-button:hover {
-    background-color: #e33900;
-  }
-  
-  .register-title-image {
-    margin-bottom: 12px;
-    width: 320px;
-  }
-  
-  .login-link {
-    padding-top: 30px;
-    font-size: 16px;
-    color: #a6a6a6;
-  }
-  
-  .login-link a {
-    color: #a6a6a6;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 420px;
+  min-height: 100vh;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.register-form-input {
+  width: 320px;
+  padding: 0.6rem 0.75rem;
+  margin: 3px 0;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.terms-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  margin: 12px 0;
+  font-size: 16px;
+  color: #818181;
+}
+
+.terms-container input[type="checkbox"] {
+  appearance: none; /* Removes default checkbox styling */
+  margin-right: 8px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #818181; /* Border color for the circle */
+  border-radius: 50%; /* Makes the checkbox a circle */
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.terms-container input[type="checkbox"]:checked {
+  background-color: #ff4100; /* Background color when checked */
+  border-color: #ff4100; /* Match border color */
+}
+
+.terms-container input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px; /* Size of the inner circle when checked */
+  height: 10px;
+  background-color: #ffffff; /* Inner circle color */
+  border-radius: 50%;
+}
+
+.terms-container label {
+  font-size: 16px;
+  color: #818181;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.terms-container .required {
+  font-weight: 400;
+}
+
+.register-form-button {
+  width: 320px;
+  padding: 10px;
+  margin: 4px 0;
+  background-color: #ff4100;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.register-form-button:disabled {
+  background-color: #b0b0b0;
+}
+
+.register-form-button:hover {
+  background-color: #e33900;
+}
+
+.register-title-image {
+  margin-bottom: 12px;
+  width: 320px;
+}
+
+.login-link {
+  padding-top: 30px;
+  font-size: 16px;
+  color: #a6a6a6;
+}
+
+.login-link a {
+  color: #a6a6a6;
+}
