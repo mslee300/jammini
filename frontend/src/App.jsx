@@ -20,6 +20,7 @@ import SocialLoginPage from "./pages/SocialLogin";
 import DownloadAppModal from "./components/DownloadAppModal";
 import Assessment from "./pages/Assessment";
 import AssessmentResult from "./pages/AssessmentResult";
+import StreakPage from "./pages/StreakPage";
 
 import "./styles/App.css";
 
@@ -68,6 +69,7 @@ function App() {
         <Route path="/sociallogin" element={<SocialLoginPage />} />
         <Route path="/assessment" element={<Assessment />} />
         <Route path="/assessmentresult" element={<AssessmentResult />} />
+        <Route path="/streak" element={<StreakPage />} />
       </Routes>
     </BrowserRouter>
   );
