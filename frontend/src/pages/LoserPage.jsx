@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/LoserPage.css";
-import gradingImage from "../assets/img/loser.svg";
+import gradingImage from "../assets/img/loser-jammini.png";
 
 function LoserPage() {
   const navigate = useNavigate();

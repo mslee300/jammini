@@ -7,7 +7,7 @@ function LoserPage() {
   const navigate = useNavigate();
 
   const handleExit = () => {
-    navigate("/register");
+    navigate("/streak");
   };
 
   return (
