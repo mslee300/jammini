@@ -10,7 +10,6 @@ const manifestForPlugin = {
     short_name: "Jammini",
     description: "Turning English learning into a sport.",
     icons: [
-      
       {
         src: "./icon-192x192.png",
         sizes: "192x192",
@@ -44,7 +43,7 @@ const manifestForPlugin = {
         src: "./icon-384x384.png",
         sizes: "384x384",
         type: "image/png",
-        purpose: "any maskable"
+        purpose: "maskable"
       }
     ],
     theme_color: "#181818",
