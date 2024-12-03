@@ -13,7 +13,7 @@
 }
 
 .loser-image {
-  width: 180px; /* Adjust width as necessary */
+  width: 220px !important;
   height: auto;
 }
 
@@ -23,7 +23,7 @@
   font-weight: 600;
   color: #000000; /* Black color */
   padding: 0;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 .loser-korean-subtext {

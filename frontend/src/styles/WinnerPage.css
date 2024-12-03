@@ -13,7 +13,7 @@
 }
 
 .winner-image {
-  width: 180px; /* Adjust width as necessary */
+  width: 220px !important;
   height: auto;
 }
 
@@ -21,7 +21,7 @@
   font-family: "Pretendard Variable", sans-serif;
   font-size: 32px;
   font-weight: 600;
-  color: #FF4100; /* Black color */
+  color: #ff4100;
   padding: 0;
 }
 
@@ -41,7 +41,7 @@
 
 .replay-button {
   position: absolute;
-  background-color: #FF4100 !important;
+  background-color: #ff4100 !important;
   color: #ffffff;
   font-weight: bold;
   border: none;
