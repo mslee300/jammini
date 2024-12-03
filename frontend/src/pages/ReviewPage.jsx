@@ -105,6 +105,36 @@ const ReviewPage = () => {
       options: "1. softly 2. moderately 3. harshly 4. quickly",
       correct: true,
     },
+    {
+      question: "All employees are required to submit their reports ___ the end of the day.",
+      options: "1. by 2. until 3. through 4. during",
+      correct: true,
+    },
+    {
+      question: "Which word means 'to forbid something by law'?",
+      options: "1. Prohibit 2. mandate 3. entitle 4. appeal",
+      correct: false,
+    },
+    {
+      question: "The manager is ___ a decision about the new policy tomorrow.",
+      options: "1. make 2. made 3. making 4. to make",
+      correct: true,
+    },
+    {
+      question: "What does 'abolish' mean?",
+      options: "1. to establish 2. to enhance 3. to eradicate 4. to reinforce",
+      correct: true,
+    },
+    {
+      question: "We need to ___ our budget to accommodate the unexpected expenses.",
+      options: "1. adjust 2. review 3. cut 4. increase",
+      correct: true,
+    },
+    {
+      question: "Which word refers to 'making something more clear'?",
+      options: "1. clarify 2. restrict 3. abolish 4. submit",
+      correct: false,
+    },
   ];
 
   // Filter reviews based on the selected filter

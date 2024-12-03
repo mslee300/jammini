@@ -21,6 +21,7 @@ import DownloadAppModal from "./components/DownloadAppModal";
 import Assessment from "./pages/Assessment";
 import AssessmentResult from "./pages/AssessmentResult";
 import StreakPage from "./pages/StreakPage";
+import CountDownGamePage from "./pages/CountDownGamePage";
 
 import "./styles/App.css";
 
@@ -70,6 +71,7 @@ function App() {
         <Route path="/assessment" element={<Assessment />} />
         <Route path="/assessmentresult" element={<AssessmentResult />} />
         <Route path="/streak" element={<StreakPage />} />
+        <Route path="/countdowngamepage" element={<CountDownGamePage />} />
       </Routes>
     </BrowserRouter>
   );
