@@ -28,6 +28,42 @@ const GamePage = () => {
       options: ["softly", "moderately", "harshly", "quickly"],
       correct_answer: "harshly",
     },
+    {
+      id: 4,
+      text: "All employees are required to submit their reports ___ the end of the day.",
+      options: ["by", "until", "through", "during"],
+      correct_answer: "by",
+    },
+    {
+      id: 5,
+      text: "Which word means 'to forbid something by law'?",
+      options: ["prohibit", "mandate", "entitle", "appeal"],
+      correct_answer: "prohibit",
+    },
+    {
+      id: 6,
+      text: "The manager is ___ a decision about the new policy tomorrow.",
+      options: ["make", "made", "making", "to make"],
+      correct_answer: "to make",
+    },
+    {
+      id: 7,
+      text: "What does 'abolish' mean?",
+      options: ["to establish", "to enhance", "to eradicate", "to reinforce"],
+      correct_answer: "to eradicate",
+    },
+    {
+      id: 8,
+      text: "We need to ___ our budget to accommodate the unexpected expenses.",
+      options: ["adjust", "review", "cut", "increase"],
+      correct_answer: "adjust",
+    },
+    {
+      id: 9,
+      text: "Which word refers to 'making something more clear'?",
+      options: ["clarify", "restrict", "abolish", "submit"],
+      correct_answer: "submit",
+    },
   ];
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
