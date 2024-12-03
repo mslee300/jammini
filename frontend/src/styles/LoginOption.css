@@ -10,6 +10,19 @@
   margin: 0px auto;
   padding: 0;
 }
+
+.text-logo-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 40px;
+}
+
+.text-logo {
+  width: 120px;
+  height: auto;
+}
+
 .header {
   display: flex;
   flex-direction: column;
