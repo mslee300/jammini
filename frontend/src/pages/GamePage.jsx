@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom"; // Step 1: Import useNavigate fo
 import CorrectAnswer from "../components/CorrectAnswer";
 import IncorrectAnswer from "../components/IncorrectAnswer";
 import ExitIcon from "../assets/img/exit.svg";
-import SettingsIcon from "../assets/img/settings.svg";
 import BookmarkIcon from "../assets/img/bookmark.svg";
 import "../styles/GamePage.css";
 
@@ -66,7 +65,7 @@ const GamePage = () => {
 
       // Step 3: Set a timeout to navigate to /winnerpage after a few seconds
       setTimeout(() => {
-        navigate("/assessmentresult");
+        navigate("/winnerpage");
       }, 2500); // 3000 ms = 3 seconds
     }
   };
@@ -101,11 +100,6 @@ const GamePage = () => {
             }}
           ></div>
         </div>
-        {/* <img
-          src={SettingsIcon}
-          alt="Settings"
-          className="header-icon settings-icon"
-        /> */}
       </div>
 
       <div className={`question-section ${isSubmitted ? "submitted" : ""}`}>
