@@ -184,18 +184,7 @@ p {
 
 /* Responsive Styles */
 @media (max-width: 430px) {
-  .profilepage-container {
-    padding: 12px;
-  }
-
   .profile-image {
-    width: 80px;
-    height: 80px;
-  }
-
-  .metric-icon,
-  .game-icon {
-    width: 30px;
-    height: 30px;
+    width: 200px;
   }
 }
