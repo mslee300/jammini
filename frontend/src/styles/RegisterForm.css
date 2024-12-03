@@ -10,6 +10,18 @@
   padding: 0;
 }
 
+.register-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form-label {
+  font-family: "Pretendard Variable";
+  font-weight: 500;
+  font-size: 16px;
+  color: #818181;
+}
+
 .register-form-input {
   width: 320px;
   padding: 0.6rem 0.75rem;
@@ -62,7 +74,7 @@
 .terms-container label {
   font-size: 16px;
   color: #818181;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
   margin-bottom: 10px;
 }

@@ -8,7 +8,7 @@ import RegisterIntro from "../assets/img/register-intro.png";
 function RegisterForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  // const [confirmPassword, setConfirmPassword] = useState("");
   const [agreed, setAgreed] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -19,10 +19,10 @@ function RegisterForm() {
       alert("이용약관 및 개인정보처리방침에 동의해주세요!");
       return;
     }
-    if (password !== confirmPassword) {
-      alert("비밀번호가 일치하지 않습니다!");
-      return;
-    }
+    // if (password !== confirmPassword) {
+    //   alert("비밀번호가 일치하지 않습니다!");
+    //   return;
+    // }
     setLoading(true);
     try {
       await api.post("/api/user/register/", { username, password });
@@ -41,27 +41,39 @@ function RegisterForm() {
         alt="Register Title"
         className="register-title-image"
       />
-      <input
-        className="register-form-input"
-        type="text"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        placeholder="아이디"
-      />
-      <input
-        className="register-form-input"
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="비밀번호"
-      />
-      <input
-        className="register-form-input"
-        type="password"
-        value={confirmPassword}
-        onChange={(e) => setConfirmPassword(e.target.value)}
-        placeholder="비밀번호 확인"
-      />
+      <div className="register-form-group">
+        <label htmlFor="username" className="register-form-label">
+          아이디
+        </label>
+        <input
+          className="register-form-input"
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </div>
+      <div className="register-form-group">
+        <label htmlFor="password" className="register-form-label">
+          비밀번호
+        </label>
+        <input
+          className="register-form-input"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+      {/* <div className="register-form-group">
+        <label htmlFor="confirm-password" className="register-form-label">
+          비밀번호 확인
+        </label>
+        <input
+          className="register-form-input"
+          type="password"
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
+        />
+      </div> */}
       <div className="terms-container">
         <input
           type="checkbox"
