@@ -10,6 +10,8 @@ import Waiting from "./pages/Waiting";
 import GamePage from "./pages/GamePage";
 import ReviewPage from "./pages/ReviewPage";
 import ReviewQuestionPage from "./pages/ReviewQuestionPage";
+import ReviewQuestionPage2 from "./pages/ReviewQuestionPage2";
+import ReviewQuestionPage3 from "./pages/ReviewQuestionPage3";
 import Grading from "./pages/Grading";
 import WinnerPage from "./pages/WinnerPage";
 import LoserPage from "./pages/LoserPage";
@@ -60,6 +62,8 @@ function App() {
         <Route path="/gamepage" element={<GamePage />} />
         <Route path="/reviewpage" element={<ReviewPage />} />
         <Route path="/reviewquestionpage" element={<ReviewQuestionPage />} />
+        <Route path="/reviewquestionpage2" element={<ReviewQuestionPage2 />} />
+        <Route path="/reviewquestionpage3" element={<ReviewQuestionPage3 />} />
         <Route path="/grading" element={<Grading />} />
         <Route path="/winnerpage" element={<WinnerPage />} />
         <Route path="/loserpage" element={<LoserPage />} />
