@@ -9,25 +9,6 @@ const ReviewQuestionPage3 = () => {
   const navigate = useNavigate();
 
   const questions = [
-    // {
-    //   id: 1,
-    //   text: "The event was ___ because of the bad weather.",
-    //   translation: "날씨가 안 좋아서 행사가 취소됐어요.",
-    //   options: ["canceled", "rescheduled", "delayed", "postponed"],
-    //   correct_answer: "canceled",
-    // },
-    // {
-    //   id: 2,
-    //   text: "The CEO has already ___ the company’s new strategy before the meeting last week.",
-    //   options: ["revise", "revised", "revises", "revising"],
-    //   correct_answer: "revised",
-    // },
-    // {
-    //   id: 3,
-    //   text: "What does the word 'severely' mean?",
-    //   options: ["softly", "moderately", "harshly", "quickly"],
-    //   correct_answer: "harshly",
-    // },
     {
       id: 1,
       text: "Which word refers to 'making something more clear'?",
@@ -42,14 +23,12 @@ const ReviewQuestionPage3 = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const currentQuestion = questions[currentQuestionIndex];
 
-  // Handle option selection
   const handleOptionSelect = (option) => {
     if (!isSubmitted) {
       setSelectedOption(option);
     }
   };
 
-  // Handle submit and check if the selected option is correct
   const handleSubmit = () => {
     if (selectedOption) {
       setIsCorrect(selectedOption === currentQuestion.correct_answer);
@@ -57,7 +36,6 @@ const ReviewQuestionPage3 = () => {
     }
   };
 
-  // Handle moving to the next question after a correct answer
   const handleNextQuestion = () => {
     setSelectedOption(null);
     setIsCorrect(null);
@@ -66,15 +44,14 @@ const ReviewQuestionPage3 = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      setCurrentQuestionIndex(0); // Reset to the first question if all are done
+      setCurrentQuestionIndex(0);
     }
   };
 
-  // Handle resetting the question state on incorrect answer
   const handleRetry = () => {
     setSelectedOption(null);
     setIsCorrect(null);
-    setIsSubmitted(false); // Resets submission state so user can try again
+    setIsSubmitted(false);
   };
 
   const handleExit = () => {
@@ -99,7 +76,6 @@ const ReviewQuestionPage3 = () => {
           {currentQuestion.text.split("___").map((part, index) => (
             <React.Fragment key={index}>
               {part}
-              {/* Render answer box only once when there's a blank to fill */}
               {index < currentQuestion.text.split("___").length - 1 && (
                 <span
                   className={`answer-box ${
@@ -149,7 +125,7 @@ const ReviewQuestionPage3 = () => {
                 : ""
             }`}
             onClick={() => handleOptionSelect(option)}
-            disabled={isSubmitted} // Disable options after submission
+            disabled={isSubmitted}
           >
             {option}
           </button>
@@ -162,17 +138,17 @@ const ReviewQuestionPage3 = () => {
           } ${isCorrect === true ? "correct" : ""}`}
           onClick={
             isCorrect === true
-              ? handleNextQuestion // Move to the next question if correct
+              ? handleNextQuestion
               : isCorrect === false
-              ? handleRetry // Reset for retry if incorrect
-              : handleSubmit // Submit if checking answer
+              ? handleRetry
+              : handleSubmit
           }
-          disabled={!selectedOption && !isSubmitted} // Disable if no selection or already submitted
+          disabled={!selectedOption && !isSubmitted}
         >
           {isCorrect === null
-            ? "정답 확인!" // Initial check answer state
+            ? "정답 확인!"
             : isCorrect === false
-            ? "다시 풀어보기" // Retry state
+            ? "다시 풀어보기"
             : "다시 풀기"}
         </button>
         {isSubmitted && (
@@ -187,7 +163,6 @@ const ReviewQuestionPage3 = () => {
         )}
       </div>
 
-      {/* Feedback Components */}
       {isCorrect === true && <CorrectAnswer pageType="review" />}
       {isCorrect === false && (
         <IncorrectAnswer

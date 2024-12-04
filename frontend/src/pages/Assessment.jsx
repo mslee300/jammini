@@ -6,13 +6,11 @@ import gradingImage from "../assets/img/winner-jammini.png";
 function WinnerPage() {
   const navigate = useNavigate();
 
-  // State for screen dimensions
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
 
-  // Update dimensions on window resize
   useEffect(() => {
     const handleResize = () => {
       setDimensions({

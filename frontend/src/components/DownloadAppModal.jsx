@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "../styles/DownloadAppModal.css";
-import AppMascot from "../assets/img/cta-mascot.png"; // Replace with your mascot image
+import AppMascot from "../assets/img/cta-mascot.png";
 
 const DownloadAppModal = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Check if modal has been shown before
     const isModalShown = localStorage.getItem("downloadModalShown");
     if (!isModalShown && !window.matchMedia("(display-mode: standalone)").matches) {
       setIsVisible(true);

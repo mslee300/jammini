@@ -25,7 +25,6 @@ function Dashboard() {
   return (
     <div className="dashboard-container">
       <h1>
-        {/* Friend mode<span>Random mode</span> */}
         1:1 게임으로 즐기는 토익공부
       </h1>
 
@@ -40,7 +39,7 @@ function Dashboard() {
           <img src={TimerIcon} alt="Timer icon" />
         </div>
 
-        <NavLink to="/" className="game-card coming-soon">
+        <NavLink to="#" className="game-card coming-soon">
           <p>끝말잇기</p>
           <img src={SpeechBubbleIcon} alt="Speech bubble icon" />
           <div className="coming-soon-overlay">
@@ -50,7 +49,7 @@ function Dashboard() {
           </div>
         </NavLink>
 
-        <NavLink to="/" className="game-card coming-soon">
+        <NavLink to="#" className="game-card coming-soon">
           <p>스무고개</p>
           <img src={ChainIcon} alt="Chain icon" />
           <div className="coming-soon-overlay">
@@ -60,7 +59,7 @@ function Dashboard() {
           </div>
         </NavLink>
 
-        <NavLink to="/" className="game-card coming-soon">
+        <NavLink to="#" className="game-card coming-soon">
           <p>문장잇기</p>
           <img src={ConversationIcon} alt="Conversation icon" />
           <div className="coming-soon-overlay">
@@ -70,7 +69,7 @@ function Dashboard() {
           </div>
         </NavLink>
 
-        <NavLink to="/" className="game-card coming-soon">
+        <NavLink to="#" className="game-card coming-soon">
           <p>발음 대결</p>
           <img src={MicrophoneIcon} alt="Microphone icon" />
           <div className="coming-soon-overlay">
@@ -80,7 +79,7 @@ function Dashboard() {
           </div>
         </NavLink>
 
-        <NavLink to="/" className="game-card coming-soon">
+        <NavLink to="#" className="game-card coming-soon">
           <p>스펠링 대결</p>
           <img src={FireIcon} alt="Document icon" />
           <div className="coming-soon-overlay">
@@ -90,7 +89,7 @@ function Dashboard() {
           </div>
         </NavLink>
 
-        <NavLink to="/" className="game-card coming-soon">
+        <NavLink to="#" className="game-card coming-soon">
           <p>동/반의어 대결</p>
           <img src={TimerIcon} alt="Link icon" />
           <div className="coming-soon-overlay">
@@ -114,7 +113,6 @@ function Dashboard() {
         timerIcon={TimerIcon}
       />
 
-      {/* Bottom navigation */}
       <Navbar />
     </div>
   );

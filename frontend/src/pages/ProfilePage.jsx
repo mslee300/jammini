@@ -15,15 +15,12 @@ function ProfilePage() {
 
   return (
     <div className="profilepage-container">
-      {/* Profile Header with Background and Image */}
       <div className="profile-background">
         <img src={ProfileImage} alt="Profile" className="profile-image" />
       </div>
       <h1 className="username">Minseok</h1>
       <p className="user-handle">@meanstone</p>
       <p className="join-date">2024. 11. 3.에 가입함</p>
-
-      {/* Profile Stats */}
       <div className="profile-stats">
         <div className="stats-row">
           <div className="stat-item">
@@ -41,13 +38,11 @@ function ProfilePage() {
         </div>
         <button
           className="add-friend-button"
-          onClick={() => alert("아직 지원하지 않는 기능이에요!")} // Alert on click
+          onClick={() => alert("아직 지원하지 않는 기능이에요!")}
         >
           친구 추가하기
         </button>
       </div>
-
-      {/* User Metrics */}
       <div className="user-metrics">
         <div className="metric-item">
           <img src={StreakFire} alt="Streak" className="metric-icon" />
@@ -74,31 +69,25 @@ function ProfilePage() {
           </p>
         </div>
       </div>
-
-      {/* Recent Games */}
       <div className={"recent-games"}>
         <h2 className="recent-games-title">최근 플레이한 게임</h2>
         <div className="game-icons">
-          {/* Speed Game */}
           <div
             className="game-item"
-            onClick={() => navigate("/gamepage")} // Navigate to /gamepage
+            onClick={() => navigate("/gamepage")}
           >
             <img src={SpeedGame} alt="Speed Game" className="game-icon" />
           </div>
-          {/* Countdown Game */}
           <div
             className="game-item"
-            onClick={() => navigate("/countdowngamepage")} // Navigate to /countdowngamepage
+            onClick={() => navigate("/countdowngamepage")}
           >
             <img src={CountDown} alt="Countdown" className="game-icon" />
           </div>
           <div className="game-item">
-            {/* Placeholder for additional game */}
           </div>
         </div>
       </div>
-      {/* Bottom navigation */}
       <Navbar />
     </div>
   );

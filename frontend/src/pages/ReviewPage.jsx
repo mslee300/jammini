@@ -8,7 +8,7 @@ import CrossIcon3 from "../assets/img/cross-circle-3.svg";
 import "../styles/ReviewPage.css";
 
 const ReviewPage = () => {
-  const [filter, setFilter] = useState("recent"); // Initialize filter state
+  const [filter, setFilter] = useState("recent");
 
   const reviews = [
     {
@@ -61,24 +61,21 @@ const ReviewPage = () => {
     },
   ];
 
-  // Track incorrect answers and their respective pages
   const incorrectPages = [
     "/reviewquestionpage",
     "/reviewquestionpage2",
     "/reviewquestionpage3",
   ];
 
-  let incorrectIndex = -1; // To map incorrect answers to pages sequentially
+  let incorrectIndex = -1;
 
-  // Filter reviews based on the selected filter
   const filteredReviews = reviews.filter((review) => {
     if (filter === "incorrect") {
-      return !review.correct; // Show only incorrect answers
+      return !review.correct;
     } else if (filter === "frequentIncorrect") {
-      // Placeholder logic: Show incorrect answers for now
       return !review.correct;
     }
-    return true; // Show all for 'recent' filter
+    return true;
   });
 
   return (
@@ -110,16 +107,16 @@ const ReviewPage = () => {
       </div>
       <div className="reviewList">
         {filteredReviews.map((review, index) => {
-          let linkTo = "#"; // Default link for correct answers or unused items
+          let linkTo = "#";
 
           if (!review.correct) {
-            incorrectIndex += 1; // Increment for each incorrect answer
-            linkTo = incorrectPages[incorrectIndex] || "#"; // Assign the corresponding review page
+            incorrectIndex += 1;
+            linkTo = incorrectPages[incorrectIndex] || "#";
           }
 
           return (
             <NavLink
-              to={linkTo} // Use the calculated link for navigation
+              to={linkTo}
               key={index}
               className="reviewCardLink"
               activeClassName="activeReviewCardLink"

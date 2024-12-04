@@ -7,13 +7,11 @@ import gradingImage from "../assets/img/winner-jammini.png";
 function WinnerPage() {
   const navigate = useNavigate();
 
-  // State for screen dimensions
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
 
-  // Update dimensions on window resize
   useEffect(() => {
     const handleResize = () => {
       setDimensions({
@@ -29,14 +27,14 @@ function WinnerPage() {
     navigate("/dashboard");
   };
 
+
   return (
     <>
-      {/* Confetti appears immediately */}
       <Confetti width={dimensions.width} height={dimensions.height} />
       <div className="winnerpage-container">
         <img src={gradingImage} alt="Winner" className="winner-image" />
         <h1 className="winner-korean-text">승리!</h1>
-        <button className="replay-button">한판 더!</button>
+        <button className="replay-button" onClick={handleExit}>한판 더!</button>
         <button className="exit-game-button" onClick={handleExit}>
           나가기
         </button>
