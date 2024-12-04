@@ -46,8 +46,8 @@ const manifestForPlugin = {
         purpose: "maskable"
       }
     ],
-    theme_color: "#181818",
-    background_color: "#e8eac2",
+    theme_color: "#ffffff",
+    background_color: "#ffffff",
     display: "standalone",
     scope: "/",
     start_url: "/",
