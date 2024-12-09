@@ -17,32 +17,28 @@ Jammini is an online live English competition game that makes learning addictive
 * [**`📈 Progress Dashboard`**](#feature4) : Check your learning progress in just 5 seconds!
 
 <h3 id="feature1">Speed Game</h3>
+Race to solve 9 TOEIC questions faster than your opponent!
 <p>
   <img width="300" src="https://github.com/user-attachments/assets/5cf665e9-6e12-42dd-a331-50bf0b13c1ca" />
 </p>
 
-Race to solve 9 TOEIC questions faster than your opponent!
-
 <h3 id="feature2">Countdown Game</h3>
+Answer more TOEIC questions than your opponent in just 60 seconds!
 <p>
   <img width="300" src="https://github.com/user-attachments/assets/f5c4047c-9699-468e-b630-4f61781dbb36" />
 </p>
 
-Answer more TOEIC questions than your opponent in just 60 seconds!
-
 <h3 id="feature3">Review Section</h3>
+Allows users to revisit and correct mistakes, providing targeted practice to reinforce learning.
 <p>
   <img width="300" src="https://github.com/user-attachments/assets/5c1b9a27-9907-432b-b3a3-3680c840730d" />
 </p>
 
-Allows users to revisit and correct mistakes, providing targeted practice to reinforce learning.
-
 <h3 id="feature4">Progress Dashboard</h3>
+Check your learning progress in just 5 seconds!
 <p>
   <img width="300" src="https://github.com/user-attachments/assets/a87d822f-971a-48ec-a85d-90edddb69487" />
 </p>
-
-Check your learning progress in just 5 seconds!
 
 ## ⚡️ Quick start
 
