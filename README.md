@@ -18,28 +18,28 @@ Jammini is an online live English competition game that makes learning addictive
 
 <h3 id="feature1">Speed Game</h3>
 <p>
-  <img width="350" src="https://github.com/user-attachments/assets/5cf665e9-6e12-42dd-a331-50bf0b13c1ca" />
+  <img width="300" src="https://github.com/user-attachments/assets/5cf665e9-6e12-42dd-a331-50bf0b13c1ca" />
 </p>
 
 Race to solve 9 TOEIC questions faster than your opponent!
 
 <h3 id="feature2">Countdown Game</h3>
 <p>
-  <img width="350" src="https://github.com/user-attachments/assets/d27b863c-eef7-46e9-b90b-b6882ccd27a2" />
+  <img width="300" src="https://github.com/user-attachments/assets/f5c4047c-9699-468e-b630-4f61781dbb36" />
 </p>
 
 Answer more TOEIC questions than your opponent in just 60 seconds!
 
 <h3 id="feature3">Review Section</h3>
 <p>
-  <img width="350" src="https://github.com/user-attachments/assets/5c1b9a27-9907-432b-b3a3-3680c840730d" />
+  <img width="300" src="https://github.com/user-attachments/assets/5c1b9a27-9907-432b-b3a3-3680c840730d" />
 </p>
 
 Allows users to revisit and correct mistakes, providing targeted practice to reinforce learning.
 
 <h3 id="feature4">Progress Dashboard</h3>
 <p>
-  <img width="350" src="https://github.com/user-attachments/assets/a87d822f-971a-48ec-a85d-90edddb69487" />
+  <img width="300" src="https://github.com/user-attachments/assets/a87d822f-971a-48ec-a85d-90edddb69487" />
 </p>
 
 Check your learning progress in just 5 seconds!
