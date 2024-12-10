@@ -1,10 +1,47 @@
 <h1 align="center"> Jammini </h1><br>
 <p align="center">
-    <img width="200" alt="Jammini logo" src="https://github.com/user-attachments/assets/ac8504a6-ad3f-4125-bc1b-1ccaed90f3e3">
+    <img width="200" alt="Jammini logo" src="https://github.com/user-attachments/assets/c7e905e4-199a-495c-b10b-9ab7fe10a606">
 </p>
 
 <p align="center"> 
-We are building a live, competitive English-learning game platform that makes preparation for standardized English exams addictive and fun by allowing users to challenge their friends while mastering difficult exam concepts.
+Jammini is an online live English competition game that makes learning addictive for Korean students. Students can master difficult English exam concepts through competitive games with friends, improving their scores and growing alongside peers.
+</p>
+
+## 🍽️ Features
+
+**3 Main Features are**:
+
+* [**`️‍🔥 Speed Game`**](#feature1): Race to solve 9 TOEIC questions faster than your opponent!
+* [**`🕒 Countdown Game`**](#feature2) : Answer more TOEIC questions than your opponent in just 60 seconds!
+* [**`📝 Review Section`**](#feature3) : Allows users to revisit and correct mistakes, providing targeted practice to reinforce learning.
+* [**`📈 Progress Dashboard`**](#feature4) : Check your learning progress in just 5 seconds!
+
+<h3 id="feature1">Speed Game</h3>
+Race to solve 9 TOEIC questions faster than your opponent!
+<br />
+<p>
+  <img width="300" src="https://github.com/user-attachments/assets/5cf665e9-6e12-42dd-a331-50bf0b13c1ca" />
+</p>
+
+<h3 id="feature2">Countdown Game</h3>
+Answer more TOEIC questions than your opponent in just 60 seconds!
+<br />
+<p>
+  <img width="300" src="https://github.com/user-attachments/assets/f5c4047c-9699-468e-b630-4f61781dbb36" />
+</p>
+
+<h3 id="feature3">Review Section</h3>
+Allows users to revisit and correct mistakes, providing targeted practice to reinforce learning.
+<br />
+<p>
+  <img width="300" src="https://github.com/user-attachments/assets/5c1b9a27-9907-432b-b3a3-3680c840730d" />
+</p>
+
+<h3 id="feature4">Progress Dashboard</h3>
+Check your learning progress in just 5 seconds!
+<br />
+<p>
+  <img width="300" src="https://github.com/user-attachments/assets/a87d822f-971a-48ec-a85d-90edddb69487" />
 </p>
 
 ## ⚡️ Quick start
@@ -39,52 +76,6 @@ npm run dev
 ## 🧱 Architecture
 <img alt="Jammini logo" src="https://github.com/user-attachments/assets/f6883d4a-af4b-4eb8-b3d8-2f9f596cb572">
 
-## 📁 Schema
 
-### User Table
-
-| Column      | Data Type | Description                    |
-|-------------|------------|--------------------------------|
-| user_id (PK)| INT        | Unique identifier for the user |
-| name        | VARCHAR    | Name of the user               |
-| password    | VARCHAR    | User's password                |
-
-### StudyPreference Table
-
-| Column             | Data Type | Description                    |
-|--------------------|------------|--------------------------------|
-| preference_id (PK) | INT        | Unique identifier for preference|
-| preference_name    | VARCHAR    | Name of the study preference    |
-
-### UserStudyPreference Table
-
-| Column             | Data Type | Description                             |
-|--------------------|------------|-----------------------------------------|
-| user_id (FK)       | INT        | Foreign key referencing User            |
-| preference_id (FK) | INT        | Foreign key referencing StudyPreference |
-
-### GameSession Table
-
-| Column        | Data Type | Description                    |
-|---------------|------------|--------------------------------|
-| session_id (PK)| INT        | Unique identifier for the session|
-| user_id (FK)  | INT        | Foreign key referencing User    |
-| start_time    | DATETIME   | Start time of the game session  |
-| end_time      | DATETIME   | End time of the game session    |
-
-### Question Table
-
-| Column         | Data Type | Description                    |
-|----------------|------------|--------------------------------|
-| question_id (PK)| INT        | Unique identifier for the question|
-| question_text  | TEXT       | Text of the question           |
-| difficulty_level| ENUM       | Difficulty level (Easy, Medium, Hard) |
-
-### GameSessionQuestion Table
-
-| Column          | Data Type | Description                    |
-|-----------------|------------|--------------------------------|
-| session_id (FK) | INT        | Foreign key referencing GameSession |
-| question_id (FK)| INT        | Foreign key referencing Question |
-| was_correct     | BOOLEAN    | Whether the user answered correctly |
-| timestamp_asked | DATETIME   | Time when the question was asked |
+<br />
+<br />

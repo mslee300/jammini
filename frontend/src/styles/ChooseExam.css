@@ -9,13 +9,12 @@
   align-items: center;
 }
 
-/* Slim Progress Bar */
 .progress-bar {
   width: 90%; /* Full width of container */
   height: 12px; /* Reduced height for a slimmer bar */
   background-color: #e6e6e6;
   border-radius: 6px;
-  margin: 0 0 40px 0 !important;
+  margin: 0 10px 0 10px !important;
   overflow: hidden;
 }
 

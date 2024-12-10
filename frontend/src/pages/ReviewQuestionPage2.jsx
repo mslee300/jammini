@@ -5,15 +5,15 @@ import IncorrectAnswer from "../components/IncorrectAnswer";
 import ExitIcon from "../assets/img/exit.svg";
 import "../styles/GamePage.css";
 
-const ReviewQuestionPage = () => {
+const ReviewQuestionPage2 = () => {
   const navigate = useNavigate();
 
   const questions = [
     {
-      id: 2,
-      text: "The CEO has already ___ the company’s new strategy before the meeting last week.",
-      options: ["revise", "revised", "revises", "revising"],
-      correct_answer: "revised",
+      id: 1,
+      text: "Which word means 'to forbid something by law'?",
+      options: ["Prohibit", "mandate", "entitle", "appeal"],
+      correct_answer: "Prohibit",
     },
   ];
 
@@ -174,4 +174,4 @@ const ReviewQuestionPage = () => {
   );
 };
 
-export default ReviewQuestionPage;
+export default ReviewQuestionPage2;

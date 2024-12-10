@@ -7,7 +7,7 @@ function LoserPage() {
   const navigate = useNavigate();
 
   const handleExit = () => {
-    navigate("/");
+    navigate("/dashboard");
   };
 
   return (
@@ -15,7 +15,7 @@ function LoserPage() {
       <img src={gradingImage} alt="Winner" className="loser-image" />
       <h1 className="loser-korean-text">패배</h1>
       <p className="loser-korean-subtext">다시 도전해보세요!</p>
-      <button className="replay-button">한판 더!</button>
+      <button className="replay-button" onClick={handleExit}>한판 더!</button>
       <button className="exit-game-button" onClick={handleExit}>
         나가기
       </button>

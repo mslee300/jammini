@@ -8,8 +8,11 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./pages/Dashboard";
 import Waiting from "./pages/Waiting";
 import GamePage from "./pages/GamePage";
+import GamePage2 from "./pages/GamePage2";
 import ReviewPage from "./pages/ReviewPage";
 import ReviewQuestionPage from "./pages/ReviewQuestionPage";
+import ReviewQuestionPage2 from "./pages/ReviewQuestionPage2";
+import ReviewQuestionPage3 from "./pages/ReviewQuestionPage3";
 import Grading from "./pages/Grading";
 import WinnerPage from "./pages/WinnerPage";
 import LoserPage from "./pages/LoserPage";
@@ -17,10 +20,12 @@ import ProfilePage from "./pages/ProfilePage";
 import ChooseExamPage from "./pages/ChooseExam";
 import LoginOptionPage from "./pages/LoginOption";
 import SocialLoginPage from "./pages/SocialLogin";
-import DownloadAppModal from "./components/DownloadAppModal";
+// import DownloadAppModal from "./components/DownloadAppModal";
 import Assessment from "./pages/Assessment";
 import AssessmentResult from "./pages/AssessmentResult";
 import StreakPage from "./pages/StreakPage";
+import CountDownGamePage from "./pages/CountDownGamePage";
+import CountDownGamePage2 from "./pages/CountDownGamePage2";
 
 import "./styles/App.css";
 
@@ -37,7 +42,7 @@ function RegisterAndLogout() {
 function App() {
   return (
     <BrowserRouter>
-      <DownloadAppModal />
+      {/* <DownloadAppModal /> */}
       <Routes>
         {/* <Route
           path="/"
@@ -57,8 +62,11 @@ function App() {
           element={<Waiting />}
         />
         <Route path="/gamepage" element={<GamePage />} />
+        <Route path="/gamepage2" element={<GamePage2 />} />
         <Route path="/reviewpage" element={<ReviewPage />} />
         <Route path="/reviewquestionpage" element={<ReviewQuestionPage />} />
+        <Route path="/reviewquestionpage2" element={<ReviewQuestionPage2 />} />
+        <Route path="/reviewquestionpage3" element={<ReviewQuestionPage3 />} />
         <Route path="/grading" element={<Grading />} />
         <Route path="/winnerpage" element={<WinnerPage />} />
         <Route path="/loserpage" element={<LoserPage />} />
@@ -70,6 +78,10 @@ function App() {
         <Route path="/assessment" element={<Assessment />} />
         <Route path="/assessmentresult" element={<AssessmentResult />} />
         <Route path="/streak" element={<StreakPage />} />
+        <Route path="/countdowngamepage" element={<CountDownGamePage />} />
+        <Route path="/countdowngamepage2" element={<CountDownGamePage2 />} />
+        <Route path="/game/speedgame/1/session/bc61c131-57c0-45ad-869a-9b651f83edf4" element={<GamePage2 />} />
+        <Route path="/game/countdowngame/1/session/cd478cb5-23d0-4837-bc7f-dd2af33051c4" element={<CountDownGamePage2 />} />
       </Routes>
     </BrowserRouter>
   );

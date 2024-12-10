@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/CorrectIncorrect.css";
-import CheckIcon from "../assets/img/check-circle.png"; // temporary, svg isn't working
+import CheckIcon from "../assets/img/check-circle.png";
 import FlagIcon from "../assets/img/flag.svg";
 
 const CorrectAnswer = ({ pageType }) => {

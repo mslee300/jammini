@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import "../styles/SpeedGameModal.css";
+import "../styles/GameModal.css";
 import LoadingDots from "../assets/img/3-dots-scale.svg";
 import CheckmarkIcon from "../assets/img/copy-checkmark.svg";
-import SpeedQuestionBox from "../assets/img/speed-question-box.svg";
 import Waiting from "../pages/Waiting";
-import TimerIcon from "../assets/img/countdown-watch.svg";
-import api from "../api"; // Assuming this is the axios instance you're using
+import TimerIcon from "../assets/img/countdown-watch-small.svg";
+import questionImage from "../assets/img/question-box.svg";
 
-const GameModal = ({ isOpen, onClose}) => {
+const CountDownModal = ({ isOpen, onClose }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [generatedLink, setGeneratedLink] = useState("");
   const [isToastVisible, setIsToastVisible] = useState(false);
@@ -16,39 +15,27 @@ const GameModal = ({ isOpen, onClose}) => {
   const handleButtonClick = () => {
     setIsLoading(true);
 
-    api
-      .post("/game/gameplay/")
-      .then((res) => {
-        setGeneratedLink(res.data.game_link); // Use the game link from the response
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        console.error(
-          "Error creating game session:",
-          err.response ? err.response.data : err
-        );
-        alert("Failed to create game session.");
-        setIsLoading(false);
-      });
+    setTimeout(() => {
+      setGeneratedLink(
+        "https://467c53ab-f0a1-46b3-842b-b678a7556090.e1-us-east-azure.choreoapps.dev/game/countdowngame/1/session/cd478cb5-23d0-4837-bc7f-dd2af33051c4"
+      );
+      setIsLoading(false);
+    }, 1000);
   };
 
   const copyToClipboard = () => {
-    // Create a modified version of the link strictly for copying
-    const modifiedLinkForClipboard = generatedLink.replace(
-      /\/game\/speedgame\/\d+\//,
-      "/game/speedgame/1/"
-    );
-
-    // Copy the modified link to the clipboard, but keep the original for redirection
-    navigator.clipboard.writeText(modifiedLinkForClipboard);
+    navigator.clipboard.writeText(generatedLink);
 
     setIsToastVisible(true);
 
-    // After the 3-second delay, navigate to the generated URL
     setTimeout(() => {
-      setIsToastVisible(false); // Hide the toast notification
-      window.location.href = generatedLink; // Redirect to the original generated link
-    }, 2500); // 3-second delay
+      setIsToastVisible(false);
+      setIsWaiting(true);
+    }, 2500);
+
+    setTimeout(() => {
+      window.location.href = "https://467c53ab-f0a1-46b3-842b-b678a7556090.e1-us-east-azure.choreoapps.dev/countdowngamepage";
+    }, 10000);
   };
 
   if (!isOpen) return null;
@@ -66,7 +53,11 @@ const GameModal = ({ isOpen, onClose}) => {
       ) : (
         <div className="modal-content">
           <div className="modal-title-container">
-            <img src={TimerIcon} alt="Timer icon" className="modal-timer-icon" />
+            <img
+              src={TimerIcon}
+              alt="Timer icon"
+              className="modal-timer-icon"
+            />
             <h2 className="modal-title">카운트다운</h2>
           </div>
           <p className="modal-description">
@@ -79,12 +70,11 @@ const GameModal = ({ isOpen, onClose}) => {
             순발력과 집중력을 기를 수 있어요!
           </p>
           <img
-            src={SpeedQuestionBox}
+            src={questionImage}
             alt="Example question"
             className="modal-question-box"
           />
 
-          {/* Show loading spinner or generated link box */}
           {generatedLink ? (
             <div className="generated-link-box">
               <input
@@ -115,7 +105,6 @@ const GameModal = ({ isOpen, onClose}) => {
             </button>
           )}
 
-          {/* Show the toast notification if visible */}
           {isToastVisible && (
             <div className="toast-notification">
               <img
@@ -132,4 +121,4 @@ const GameModal = ({ isOpen, onClose}) => {
   );
 };
 
-export default GameModal;
+export default CountDownModal;

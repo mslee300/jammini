@@ -98,7 +98,6 @@ const CountdownGamePage = () => {
 
   const currentQuestion = questions[currentQuestionIndex];
 
-  // Timer logic
   useEffect(() => {
     if (timeLeft > 0) {
       const timer = setInterval(() => {
@@ -114,7 +113,7 @@ const CountdownGamePage = () => {
     setIsGameOver(true);
     navigate("/grading");
     setTimeout(() => {
-      navigate("/winnerpage");
+      navigate("/loserpage");
     }, 2500);
   };
 
@@ -175,10 +174,9 @@ const CountdownGamePage = () => {
         </div>
         <div className="timer">
           <img src={ClockIcon} alt="Clock icon" className="clock-icon" />
-          <span>{`${Math.floor(timeLeft / 60)}:${String(timeLeft % 60).padStart(
-            2,
-            "0"
-          )}`}</span>
+          <span>{`${Math.floor(timeLeft / 60)}:${String(
+            timeLeft % 60
+          ).padStart(2, "0")}`}</span>
         </div>
       </div>
 

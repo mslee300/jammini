@@ -5,15 +5,15 @@ import IncorrectAnswer from "../components/IncorrectAnswer";
 import ExitIcon from "../assets/img/exit.svg";
 import "../styles/GamePage.css";
 
-const ReviewQuestionPage = () => {
+const ReviewQuestionPage3 = () => {
   const navigate = useNavigate();
 
   const questions = [
     {
-      id: 2,
-      text: "The CEO has already ___ the company’s new strategy before the meeting last week.",
-      options: ["revise", "revised", "revises", "revising"],
-      correct_answer: "revised",
+      id: 1,
+      text: "Which word refers to 'making something more clear'?",
+      options: ["Clarify", "restrict", "abolish", "submit"],
+      correct_answer: "Clarify",
     },
   ];
 
@@ -174,4 +174,4 @@ const ReviewQuestionPage = () => {
   );
 };
 
-export default ReviewQuestionPage;
+export default ReviewQuestionPage3;

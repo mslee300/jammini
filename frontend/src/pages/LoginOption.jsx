@@ -8,7 +8,7 @@ const LoginOption = () => {
   const navigate = useNavigate();
 
   const handleSignUpClick = () => {
-    navigate("/assessment"); // Navigate to the ChooseExam page
+    navigate("/register");
   };
 
   const handleLoginClick = () => {

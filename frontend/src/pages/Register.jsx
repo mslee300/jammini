@@ -82,14 +82,41 @@ function RegisterForm() {
           onChange={(e) => setAgreed(e.target.checked)}
         />
         <label htmlFor="terms">
-          이용약관 & 개인정보처리방침{" "}
-          <span className="required">동의(필수)</span>
+          <a
+            href="https://charmed-hyacinth-41c.notion.site/15264f51164c803f96c0e7b076c7300d?pvs=4"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", color: "#FF4100" }}
+          >
+            이용약관
+          </a>{" "}
+          및&nbsp;
+          <a
+            href="https://charmed-hyacinth-41c.notion.site/15264f51164c80789849e0f4b196ada0?pvs=4"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", color: "#FF4100" }}
+          >
+            개인정보처리방침
+          </a>
+          <span className="required"> 동의(필수)</span>
         </label>
       </div>
+
       {loading && <LoadingIndicator />}
-      <button className="register-form-button" type="submit">
+      <button
+        className="register-form-button"
+        type="submit"
+        disabled={!agreed}
+        style={{
+          backgroundColor: agreed ? "#FF4100" : "#E5E5E5",
+          color: agreed ? "white" : "#AFAFAF",
+          cursor: agreed ? "pointer" : "not-allowed",
+        }}
+      >
         회원가입
       </button>
+
       <p className="login-link">
         이미 계정이 있으신가요?
         <a href="/login" style={{ color: "#FF4100", fontWeight: "bold" }}>

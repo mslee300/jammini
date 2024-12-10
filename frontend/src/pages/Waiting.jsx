@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom"; // Import useNavigate for redirection
+import { useParams, useNavigate } from "react-router-dom";
 import "../styles/Waiting.css";
-// import FireIcon from "../assets/img/speedgame-fire.svg";
 import TimerIcon from "../assets/img/waiting-jammini.png";
-import api from "../api"; // Axios instance
+import api from "../api";
 
 const Waiting = ({ onExit }) => {
-  const { userId, sessionId } = useParams(); // Retrieve userId and sessionId from URL
+  const { userId, sessionId } = useParams();
   const [canStart, setCanStart] = useState(false);
-  const [countdown, setCountdown] = useState(null); // State to manage countdown
-  const navigate = useNavigate(); // For redirecting to the game page
+  const [countdown, setCountdown] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     console.log("useEffect triggered");
@@ -24,8 +23,8 @@ const Waiting = ({ onExit }) => {
             console.log("API response:", response.data);
             if (response.data.can_start) {
               setCanStart(true);
-              clearInterval(intervalId); // Stop polling once the game can start
-              startCountdown(); // Start the countdown when the game can start
+              clearInterval(intervalId);
+              startCountdown();
             }
           })
           .catch((err) => {
@@ -35,18 +34,17 @@ const Waiting = ({ onExit }) => {
             );
           });
       }
-    }, 1000); // Poll every 1 second
+    }, 1000);
 
     return () => {
-      clearInterval(intervalId); // Clean up the interval on unmount
+      clearInterval(intervalId);
       console.log("Cleaning up interval");
     };
   }, [userId, sessionId]);
 
   const startCountdown = () => {
-    // First show "READY?" for 2 seconds
     setTimeout(() => {
-      setCountdown(3); // Start the countdown at 3 after 2 seconds
+      setCountdown(3);
 
       let counter = 3;
       const countdownInterval = setInterval(() => {
@@ -55,16 +53,15 @@ const Waiting = ({ onExit }) => {
 
         if (counter === 0) {
           clearInterval(countdownInterval);
-          navigate("/gamepage"); // Redirect to game page after countdown
+          navigate("/gamepage");
         }
-      }, 1000); // Update countdown every second
-    }, 2000); // Wait 2 seconds to display "READY?"
+      }, 1000);
+    }, 2000);
   };
 
   return (
     <div className="waiting-container">
       {!canStart && countdown === null && (
-        // <img src={FireIcon} alt="Fire icon" className="waiting-fire-icon" />
         <img src={TimerIcon} alt="Timer icon" className="waiting-fire-icon" />
       )}
 

@@ -56,7 +56,7 @@ function Form({ route, method }) {
         로그인
       </button>
       <p className="register">
-        <a href="#">아이디·비밀번호 찾기 | </a>
+        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSetBkLfxzPYM71FPXd19RHxmB7OWYCcBeoZEW7dvrfXFGk26g/viewform?usp=header">아이디·비밀번호 찾기 | </a>
         <a href="/register" style={{ color: "#FF4100", fontWeight: "bold" }}>
           회원가입
         </a>
