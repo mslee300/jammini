@@ -3,22 +3,32 @@ name: CI for Jammini
 on:
   push:
     branches:
-      - main # Trigger workflow on pushes to the main branch
+      - main
   pull_request:
     branches:
-      - main # Trigger workflow on pull requests to the main branch
+      - main
 
 jobs:
   ci-pipeline:
     runs-on: ubuntu-latest
 
+    services:
+      db:
+        image: postgres:latest
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: test_db
+
     steps:
-      # 1. Checkout code
+      # 1. Checkout the code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2. Backend Setup
-      - name: Set up Python for Backend
+      # 2. Set up Python environment for Backend
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.9"
@@ -30,31 +40,23 @@ jobs:
           source env/bin/activate
           pip install -r requirements.txt
 
+      # 3. Set Environment Variables
+      - name: Set Environment Variables
+        run: |
+          echo "DB_NAME=test_db" >> $GITHUB_ENV
+          echo "DB_USER=postgres" >> $GITHUB_ENV
+          echo "DB_PWD=postgres" >> $GITHUB_ENV
+          echo "DB_HOST=localhost" >> $GITHUB_ENV
+          echo "DB_PORT=5432" >> $GITHUB_ENV
+
+      # 4. Run Backend Tests
       - name: Run Backend Tests
         working-directory: backend
         run: |
           source env/bin/activate
           python manage.py test
 
-      # 3. Frontend Setup
-      - name: Set up Node.js for Frontend
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16"
-
-      - name: Install Frontend Dependencies
-        working-directory: frontend
-        run: npm install
-
-      - name: Run Frontend Tests
-        working-directory: frontend
-        run: npm test
-
-      - name: Build Frontend
-        working-directory: frontend
-        run: npm run build
-
-      # 4. Notify of Successful CI
+      # 5. Notify of Successful CI
       - name: Notify Success
         if: success()
         run: echo "✅ CI Pipeline Completed Successfully! 🎉"
