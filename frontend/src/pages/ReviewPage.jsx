@@ -103,7 +103,7 @@ const ReviewPage = () => {
         >
           <img src={CrossIcon2} alt="Frequent Incorrect" className="icon" />{" "}
           자주 틀리는답
-          </button>
+        </button>
       </div>
       <div className="reviewList">
         {filteredReviews.map((review, index) => {

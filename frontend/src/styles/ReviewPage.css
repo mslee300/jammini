@@ -1,11 +1,11 @@
-a:link { 
-  text-decoration: none; 
-} 
+a:link {
+  text-decoration: none;
+}
 
 .container {
   max-width: 420px;
   margin: 0 auto;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   height: 100vh;
   overflow-y: auto;
   display: flex;
@@ -112,10 +112,6 @@ a:link {
   margin-left: 20px;
 }
 
-
-
-
-
 .filterButton {
   border: none;
   padding: 9px 16px;
@@ -140,4 +136,8 @@ a:link {
   background-color: #ffffff; /* White background */
   color: #000000; /* Black text */
   font-weight: 600;
+}
+
+.filterButton.selected img {
+  filter: brightness(0); /* Makes the icon black */
 }
