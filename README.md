@@ -11,10 +11,10 @@ Jammini is an online live English competition game that makes learning addictive
 
 **3 Main Features are**:
 
-* [**`️‍🔥 Speed Game`**](#feature1): Race to solve 9 TOEIC questions faster than your opponent!
-* [**`🕒 Countdown Game`**](#feature2) : Answer more TOEIC questions than your opponent in just 60 seconds!
-* [**`📝 Review Section`**](#feature3) : Allows users to revisit and correct mistakes, providing targeted practice to reinforce learning.
-* [**`📈 Progress Dashboard`**](#feature4) : Check your learning progress in just 5 seconds!
+- [**`️‍🔥 Speed Game`**](#feature1): Race to solve 9 TOEIC questions faster than your opponent!
+- [**`🕒 Countdown Game`**](#feature2) : Answer more TOEIC questions than your opponent in just 60 seconds!
+- [**`📝 Review Section`**](#feature3) : Allows users to revisit and correct mistakes, providing targeted practice to reinforce learning.
+- [**`📈 Progress Dashboard`**](#feature4) : Check your learning progress in just 5 seconds!
 
 <h3 id="feature1">Speed Game</h3>
 Race to solve 9 TOEIC questions faster than your opponent!
@@ -74,8 +74,8 @@ npm run dev
 ```
 
 ## 🧱 Architecture
+
 <img alt="Jammini logo" src="https://github.com/user-attachments/assets/f6883d4a-af4b-4eb8-b3d8-2f9f596cb572">
 
-
 <br />
-<br />Test CI Workflow
+<br />
