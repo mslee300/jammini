@@ -1,0 +1,60 @@
+name: CI for Jammini
+
+on:
+  push:
+    branches:
+      - main # Trigger workflow on pushes to the main branch
+  pull_request:
+    branches:
+      - main # Trigger workflow on pull requests to the main branch
+
+jobs:
+  ci-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Backend Setup
+      - name: Set up Python for Backend
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install Backend Dependencies
+        working-directory: backend
+        run: |
+          python3 -m venv env
+          source env/bin/activate
+          pip install -r requirements.txt
+
+      - name: Run Backend Tests
+        working-directory: backend
+        run: |
+          source env/bin/activate
+          python manage.py test
+
+      # 3. Frontend Setup
+      - name: Set up Node.js for Frontend
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: Install Frontend Dependencies
+        working-directory: frontend
+        run: npm install
+
+      - name: Run Frontend Tests
+        working-directory: frontend
+        run: npm test
+
+      - name: Build Frontend
+        working-directory: frontend
+        run: npm run build
+
+      # 4. Notify of Successful CI
+      - name: Notify Success
+        if: success()
+        run: echo "✅ CI Pipeline Completed Successfully! 🎉"
